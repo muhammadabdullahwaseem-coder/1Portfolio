@@ -7,12 +7,12 @@ import { BsGithub } from "react-icons/bs";
 function ProjectCards(props) {
   return (
     <Card className="project-card-view">
-      {/* --- ELECTRIC FILTER (The Magic) --- */}
-      {/* This SVG is hidden but provides the "crackle" filter for the CSS to use */}
+      {}
+      {}
       <svg style={{ position: "absolute", width: 0, height: 0 }} aria-hidden="true">
         <defs>
           <filter id="blue-electric-filter" x="-20%" y="-20%" width="140%" height="140%">
-            {/* 1. Generate Static Noise (base texture) */}
+            {}
             <feTurbulence 
               type="fractalNoise" 
               baseFrequency="0.03" 
@@ -20,7 +20,7 @@ function ProjectCards(props) {
               seed="5" 
               result="noise" 
             />
-            {/* 2. Animate the Noise to make it "flow" */}
+            {}
             <feOffset in="noise" dx="0" dy="0" result="movingNoise">
               <animate 
                 attributeName="dx" 
@@ -35,7 +35,7 @@ function ProjectCards(props) {
                 repeatCount="indefinite" 
               />
             </feOffset>
-            {/* 3. Distort the Source (Border) using the Moving Noise */}
+            {}
             <feDisplacementMap 
               in="SourceGraphic" 
               in2="movingNoise" 
@@ -46,7 +46,7 @@ function ProjectCards(props) {
           </filter>
         </defs>
       </svg>
-      {/* ----------------------------------- */}
+      {}
 
       <Card.Img variant="top" src={props.imgPath} alt="card-img" />
       <Card.Body>

@@ -1,4 +1,4 @@
-/* 1. LOAD THE CUSTOM FONT */
+
 @font-face {
   font-family: 'MyLogoFont';
   src: url('./Assets/logo-font.ttf') format('truetype');
@@ -6,15 +6,15 @@
   font-style: normal;
 }
 
-/* 2. APPLY IT TO THE NAVBAR LOGO */
+
 .navbar-brand {
   font-family: 'MyLogoFont', sans-serif !important;
-  font-size: 2.5em !important; /* Adjust size as needed */
+  font-size: 2.5em !important; 
   
-  /* Electric Blue Color */
+  
   color: #00e1ff !important;
   
-  /* Glow Effect */
+  
   text-shadow: 
     0 0 10px #00e1ff,
     0 0 20px #00e1ff;
@@ -23,7 +23,7 @@
   padding-top: 0 !important;
 }
 
-/* Optional: White-hot hover effect */
+
 .navbar-brand:hover {
   color: #ffffff !important;
   text-shadow: 
@@ -32,27 +32,27 @@
     0 0 40px #00e1ff;
 }
 html {
-  /* This controls the transparent cards behind text */
+  
   --section-background-color: linear-gradient(
     to bottom left,
-    rgba(0, 198, 255, 0.15),  /* Light Blue transparency */
-    rgba(0, 114, 255, 0.3)    /* Deep Blue transparency */
+    rgba(0, 198, 255, 0.15),  
+    rgba(0, 114, 255, 0.3)    
   );
 
-  /* This controls image overlays */
+  
   --image-gradient: linear-gradient(
     to bottom left,
     rgba(0, 198, 255, 0.678),
     rgba(0, 114, 255, 0.863)
   );
 
-  /* This changes the text to color */
+  
   --imp-text-color: #00d2ff;
 }
 
 body {
   background-image: linear-gradient(to right, #000428, #004e92) !important;
-  background-color: #000428 !important; /* Fallback color */
+  background-color: #000428 !important; 
   color: white !important;
 }
 
@@ -64,10 +64,10 @@ button:focus {
   box-shadow: none !important;
 }
 
-/* --------- */
-/* Preloader */
-/* --------- */
-/* --- NEW ELECTRIC PRELOADER (No SVG needed) --- */
+
+
+
+
 #preloader {
   position: fixed;
   top: 0;
@@ -75,41 +75,41 @@ button:focus {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background-color: #000428; /* Matches your background */
+  background-color: #000428; 
   
-  /* Flexbox to center the spinner */
+  
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* This creates the spinning glowing ring */
+
 #preloader::after {
   content: "";
-  width: 80px;  /* Size of the spinner */
+  width: 80px;  
   height: 80px;
   border-radius: 50%;
   
-  /* Make the ring transparent, then color the top and bottom */
+  
   border: 4px solid transparent;
-  border-top-color: #00e1ff; /* Electric Blue */
+  border-top-color: #00e1ff; 
   border-bottom-color: #00e1ff;
   
-  /* Add the Glow Effect */
+  
   box-shadow: 0 0 15px #00e1ff, inset 0 0 15px #00e1ff;
   
-  /* Animation */
+  
   animation: electricSpin 1.5s linear infinite;
 }
 
-/* The Animation Keyframes */
+
 @keyframes electricSpin {
   0% {
     transform: rotate(0deg) scale(1);
     opacity: 1;
   }
   50% {
-    transform: rotate(180deg) scale(1.1); /* Pulses slightly */
+    transform: rotate(180deg) scale(1.1); 
     opacity: 0.8;
   }
   100% {
@@ -118,7 +118,7 @@ button:focus {
   }
 }
 
-/* Hides the preloader when loaded */
+
 #preloader-none {
   opacity: 0;
   visibility: hidden;
@@ -131,34 +131,34 @@ button:focus {
   height: 100vh;
 }
 
-/* --------- */
-/* Scrollbar   */
-/* --------- */
+
+
+
 
 ::-webkit-scrollbar {
   width: 7px;
 }
 
-/* Track */
+
 ::-webkit-scrollbar-track {
   background: #083280;;
 }
 
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
   background: rgba(0, 114, 255, 0.3);
   border-radius: 12px;
 }
 
-/* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 198, 255, 0.678);
   border-radius: 12px;
 }
 
-/* --------- */
-/* Navbar Section  */
-/* --------- */
+
+
+
 .navbar {
   background: rgba(10, 25, 47, 0.25) !important; 
   backdrop-filter: blur(15px) !important;
@@ -285,9 +285,9 @@ button:focus {
   width: 100%;
 }
 
-/* --------- */
-/* Home section */
-/* --------- */
+
+
+
 .wave {
   animation-name: wave-animation; 
   animation-duration: 2.1s; 
@@ -409,7 +409,7 @@ button:focus {
   padding-inline-start: 0 !important;
 }
 
-/* --- CIRCULAR SOCIAL BUTTONS --- */
+
 .home-social-icons {
   position: relative !important;
   display: inline-flex !important;
@@ -423,24 +423,24 @@ button:focus {
   text-align: center !important;
   transition: 0.3s ease-in-out !important;
   
-  /* INITIAL STATE: White Background, Blue Icon */
+  
   background-color: white !important;
-  color: #00e1ff !important; /* Your Electric Blue */
+  color: #00e1ff !important; 
   box-shadow: 0 0 5px rgba(0, 225, 255, 0.3);
 }
 
-/* Remove the old '::before' effect if present, as we are doing a direct swap now */
+
 .home-social-icons::before {
   display: none !important;
 }
 
-/* --- HOVER STATE: INVERSION --- */
+
 .home-social-icons:hover {
-  /* HOVER: Blue Background, White Icon */
+  
   background-color: #00e1ff !important;
   color: white !important;
   
-  /* Add Glow and Scale */
+  
   transform: scale(1.15) !important;
   box-shadow: 
     0 0 10px #00e1ff,
@@ -457,9 +457,9 @@ button:focus {
   color: #0c1886 !important;
 }
 
-/* --------- */
-/* Footer */
-/* --------- */
+
+
+
 .footer {
   background: rgba(10, 25, 47, 0.25) !important; 
   backdrop-filter: blur(15px) !important;         
@@ -506,9 +506,9 @@ button:focus {
   color: #a588c0 !important;
 }
 
-/* --------- */
-/* Projects */
-/* --------- */
+
+
+
 .project-section {
   position: relative !important;
   padding-top: 150px !important;
@@ -524,7 +524,7 @@ button:focus {
   height: auto !important;
 }
 
-/* --- UPDATED CARD STYLES --- */
+
 .project-card-view {
   position: relative;
   background-color: transparent !important;
@@ -534,11 +534,11 @@ button:focus {
   overflow: visible !important;
   z-index: 1;
   
-  /* --- FIX 1: FORCE EQUAL HEIGHT --- */
+  
   height: 100% !important; 
   display: flex !important;
   flex-direction: column !important;
-  /* -------------------------------- */
+  
 
   color: #00e1ff !important; 
   transition: none !important;
@@ -546,23 +546,23 @@ button:focus {
 }
 
 
-/* The Electric Border Layer */
+
 .project-card-view::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: -1;
   
-  /* Electric Blue Border */
+  
   border: 2px solid #00e1ff !important;
   
-  /* 2. LIGHTER BACKGROUND (Glass Effect) */
+  
   background: rgba(0, 0, 0, 0.2) !important; 
   
-  /* The SVG Filter */
+  
   filter: url(#blue-electric-filter);
   
-  /* Glow */
+  
   box-shadow: 
     0 0 10px #00e1ff, 
     0 0 20px #00e1ff, 
@@ -572,7 +572,7 @@ button:focus {
   transition: none !important;
 }
 
-/* Force Stop Hover Effects */
+
 .project-card-view:hover {
   transform: none !important;
   opacity: 1 !important;
@@ -586,7 +586,7 @@ button:focus {
   border-color: #00e1ff !important;
 }
 
-/* ----------------------------------------------------------------- */
+
 
 .blog-card {
   padding-top: 50px !important;
@@ -620,16 +620,16 @@ button:focus {
 }
 
 .card-img-top {
-  /* Keep your existing style */
+  
   padding: 20px !important;
   opacity: 0.8 !important;
   border-radius: 10px !important;
   
-  /* --- FIX 2: FORCE UNIFORM IMAGE SIZE --- */
+  
   width: 100% !important;
-  height: 250px !important; /* Adjust this number if you want taller/shorter images */
-  object-fit: cover !important; /* This ensures images don't look squashed */
-  /* --------------------------------------- */
+  height: 250px !important; 
+  object-fit: cover !important; 
+  
 }
 
 .blog-img {
@@ -660,9 +660,9 @@ button:focus {
   padding-top: 10px !important;
 }
 
-/* --------- */
-/* About */
-/* --------- */
+
+
+
 
 .about-section {
   position: relative !important;
@@ -733,9 +733,9 @@ button:focus {
   }
 }
 
-/* --------- */
-/* Resume */
-/* --------- */
+
+
+
 
 .resume-section {
   position: relative !important;
@@ -851,4 +851,51 @@ button:focus {
   100% { transform: scale(1); }
 }
 
+/* --- MOBILE GLASS NAVBAR FIX --- */
+@media (max-width: 767px) {
+  /* 1. The Main Navbar Strip */
+  .navbar {
+    /* Make the bar itself clear so we only see the glass menu */
+    background-color: transparent !important; 
+    padding: 10px !important;
+  }
 
+  /* 2. The Sticky Navbar State (Overriding default solid color) */
+  .sticky {
+    background-color: rgba(0, 4, 40, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+  }
+
+  /* 3. The Dropdown Menu (The Glass Box) */
+  .navbar-collapse {
+    
+    /* Use a Linear Gradient for a "Premium Glass" look */
+    background: linear-gradient(
+      135deg, 
+      rgba(255, 255, 255, 0.1), 
+      rgba(255, 255, 255, 0.05)
+    ) !important;
+    
+    /* The Blur Magic */
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    
+    /* Borders and Shadows */
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
+    
+    border-radius: 20px !important;
+    margin-top: 15px !important;
+    padding: 20px !important;
+  }
+
+  /* 4. Center the links */
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  .nav-item {
+    margin: 10px 0;
+  }
+}

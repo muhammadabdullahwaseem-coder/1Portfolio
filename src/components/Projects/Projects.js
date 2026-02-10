@@ -3,9 +3,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 
-// IMPORT YOUR PROJECT IMAGES HERE
-// Example: import chatImg from "../../Assets/Projects/chat.png";
-// For now, I'll use a placeholder or you can replace these variables with your imports.
+
+
+
 import leaf from "../../Assets/Projects/leaf.png"; 
 import emotion from "../../Assets/Projects/emotion.png";
 import editor from "../../Assets/Projects/codeEditor.png";
