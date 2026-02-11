@@ -851,37 +851,26 @@ button:focus {
   100% { transform: scale(1); }
 }
 
-/* --- MOBILE GLASS NAVBAR FIX --- */
 @media (max-width: 767px) {
-  /* 1. The Main Navbar Strip */
   .navbar {
-    /* Make the bar itself clear so we only see the glass menu */
     background-color: transparent !important; 
     padding: 10px !important;
   }
 
-  /* 2. The Sticky Navbar State (Overriding default solid color) */
   .sticky {
     background-color: rgba(0, 4, 40, 0.3) !important;
     backdrop-filter: blur(10px) !important;
     -webkit-backdrop-filter: blur(10px) !important;
   }
 
-  /* 3. The Dropdown Menu (The Glass Box) */
   .navbar-collapse {
-    
-    /* Use a Linear Gradient for a "Premium Glass" look */
     background: linear-gradient(
       135deg, 
       rgba(255, 255, 255, 0.1), 
       rgba(255, 255, 255, 0.05)
     ) !important;
-    
-    /* The Blur Magic */
     backdrop-filter: blur(20px) !important;
     -webkit-backdrop-filter: blur(20px) !important;
-    
-    /* Borders and Shadows */
     border: 1px solid rgba(255, 255, 255, 0.18) !important;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
     
@@ -890,7 +879,6 @@ button:focus {
     padding: 20px !important;
   }
 
-  /* 4. Center the links */
   .navbar-nav {
     text-align: center;
   }
