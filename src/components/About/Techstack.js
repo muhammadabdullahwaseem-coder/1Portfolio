@@ -42,10 +42,10 @@ function Techstack() {
         <img src={Docker} alt="docker" />
         <div className="tech-icons-text">Docker</div>
       </Col>
-      <Col xs={4} md={2} className="tech-icons">
+      {/* <Col xs={4} md={2} className="tech-icons">
         <img src={Java} alt="haskell" />
         <div className="tech-icons-text">Java</div>
-      </Col>
+      </Col> */}
       <Col xs={4} md={2} className="tech-icons">
         <img src={MUI} alt="mui" />
         <div className="tech-icons-text">Material UI</div>
@@ -55,10 +55,10 @@ function Techstack() {
         <img src={Postman} alt="Postman" />
         <div className="tech-icons-text">Postman</div>
       </Col>
-      <Col xs={4} md={2} className="tech-icons">
+      {/* <Col xs={4} md={2} className="tech-icons">
         <img src={AWS} alt="Postman" className="tech-icon-images" />
         <div className="tech-icons-text">AWS</div>
-      </Col>
+      </Col> */}
     </Row>
   );
 }

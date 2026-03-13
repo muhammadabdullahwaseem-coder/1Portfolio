@@ -13,10 +13,10 @@ function AboutCard() {
             from <span className="purple"> Lahore, Pakistan.</span>
             <br />I am currently a passionate{" "}
             <span className="purple">Frontend Developer</span> looking for
-            internship opportunities.
-            <br />I am pursuing a Diploma in Web Development with AI at{" "}
+            internship and entry level opportunities.
+            <br />I am pursuing a Diploma in Web Development with AI from{" "}
             <span className="purple">Nexskill (Arfa Tower)</span> and completing
-            my ICS at <span className="purple">Punjab College</span>.
+            my ICS from <span className="purple">Punjab College</span>.
             <br />
             <br />
             Apart from coding, I love to create and build things!

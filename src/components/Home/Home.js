@@ -6,7 +6,7 @@ import Home2 from "./Home2";
 import Type from "./Type";
 import { FaXTwitter } from "react-icons/fa6";
 
-import { AiFillGithub } from "react-icons/ai";
+import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Home() {
@@ -67,6 +67,16 @@ function Home() {
               </li>
               <li className="social-icons">
                 <a
+                  href="mailto:mabdullahwaseem744@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <AiOutlineMail />
+                </a>
+              </li>
+              {/* <li className="social-icons">
+                <a
                   href="https://x.com/MAbdullah121254"
                   target="_blank"
                   rel="noreferrer"
@@ -74,7 +84,7 @@ function Home() {
                 >
                   <FaXTwitter />
                 </a>
-              </li>
+              </li> */}
               <li className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/m-abdullah-waseem"

@@ -9,6 +9,7 @@ import crudApp from "../../Assets/Projects/crud-app.webp";
 import chatify from "../../Assets/Projects/chatify.webp";
 import rtk from "../../Assets/Projects/rtk.webp";
 import jwt from "../../Assets/Projects/jwt.webp";
+import nexlink from "../../Assets/Projects/nexlink.png";
 
 function Projects() {
   return (
@@ -35,10 +36,20 @@ function Projects() {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={nexlink}
+              isBlog={false}
+              title="Link Shortener (Nex-Link)"
+              description="A versatile URL shortener developed with the MERN stack. It efficiently maps bulky links to compact keys for rapid redirection, while offering an intuitive interface to instantly generate and download scannable QR codes."
+              ghLink="https://github.com/muhammadabdullahwaseem-coder/Nex-Link"
+              demoLink="https://link-shortener-by-mrab.onrender.com"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={jwt}
               isBlog={false}
               title="Secure Authentication (JWT)"
-              description="A robust login system implementing JSON Web Tokens (JWT) for secure authentication. This project handles user sessions securely, ensuring protected routes and safe data access."
+              description="A robust login system implementing JSON Web Tokens (JWT) for secure authentication. This project handles user sessions securely, ensuring protected routes and safe login and signup functionality."
               ghLink="https://github.com/muhammadabdullahwaseem-coder/Login-page-JWT"
               demoLink="https://login-page-jwt-1.onrender.com"
             />
@@ -48,7 +59,7 @@ function Projects() {
               imgPath={crudApp}
               isBlog={false}
               title="Online Store Dashboard"
-              description="A product management system for an online store featuring full CRUD (Create, Read, Update, Delete) operations. It allows administrators to manage inventory efficiently with a dynamic user interface."
+              description="A product management system for an online store featuring full CRUD (Create, Read, Update, Delete) operations. This application allows administrators to manage inventory efficiently with a dynamic user interface."
               ghLink="https://github.com/muhammadabdullahwaseem-coder/Online-Store-Products"
               demoLink="https://online-store-products.onrender.com"
             />
@@ -58,7 +69,7 @@ function Projects() {
               imgPath={contextApi}
               isBlog={false}
               title="Theme Switcher (Context API)"
-              description="A dynamic theme toggler built using React Context API. This project demonstrates global state management by allowing users to switch between Light and Dark modes seamlessly across the entire application."
+              description="A dynamic theme toggler built using React Context API. It demonstrates global state management by allowing users to switch between Light and Dark modes seamlessly across the application."
               ghLink="https://github.com/muhammadabdullahwaseem-coder/Context_API"
               demoLink="https://context-api-taupe.vercel.app"
             />
@@ -68,7 +79,7 @@ function Projects() {
               imgPath={rtk}
               isBlog={false}
               title="Task Manager (Redux Toolkit)"
-              description="An efficient task management application utilizing Redux Toolkit. It showcases scalable state management, allowing for predictable state updates and a smooth user experience for managing daily tasks."
+              description="A user-friendly feedback component that allows users to select and submit ratings. It focuses on interactive UI design and handling user input states effectively."
               ghLink="https://github.com/muhammadabdullahwaseem-coder/Redux-Toolkit"
               demoLink="https://reduxtoolkitbymrab.netlify.app"
             />

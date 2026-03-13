@@ -21,7 +21,11 @@ function Home2() {
               <i>
                 <b className="purple">
                   {" "}
-                  JavaScript, Node.js, and JavaScript{" "}
+                  Python, Node.js, 
+                  </b>
+                  and   
+                  <b className="purple">
+                     {" "}JavaScript{" "}
                 </b>
               </i>
               — and I enjoy working across both backend and frontend stacks.
@@ -31,11 +35,11 @@ function Home2() {
               <i>
                 <b className="purple">
                   {" "}
-                  Web Applications, Blockchain Solutions,{" "}
+                  Web Development 
+                  </b> and<b className="purple">
+                  {" "}  Web Design{" "}
                 </b>
               </i>
-              and exploring new ways to bridge on-chain and off-chain systems.
-              <br />
               <br />
               Whenever possible, I love building projects with
               <b className="purple"> Node.js </b> and modern frameworks like{" "}
