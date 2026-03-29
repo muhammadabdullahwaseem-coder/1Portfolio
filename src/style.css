@@ -540,7 +540,7 @@ button:focus {
   flex-direction: column !important;
   
 
-  color: #00e1ff !important; 
+  color: #fcfcfc !important; 
   transition: none !important;
   transform: none !important;
 }
@@ -659,7 +659,6 @@ button:focus {
   font-weight: 500 !important;
   padding-top: 10px !important;
 }
-
 
 
 

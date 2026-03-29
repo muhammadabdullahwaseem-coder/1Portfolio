@@ -12,7 +12,7 @@ function AboutCard() {
             <span className="purple">Muhammad Abdullah Waseem </span>
             from <span className="purple"> Lahore, Pakistan.</span>
             <br />I am currently a passionate{" "}
-            <span className="purple">Frontend Developer</span> looking for
+            <span className="purple">Mern Stack Developer</span> looking for
             internship and entry level opportunities.
             <br />I am pursuing a Diploma in Web Development with AI from{" "}
             <span className="purple">Nexskill (Arfa Tower)</span> and completing
