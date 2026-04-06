@@ -4,8 +4,6 @@ import homeLogo from "../../Assets/home-main.webp";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
-import { FaXTwitter } from "react-icons/fa6";
-
 import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -60,7 +58,7 @@ function Home() {
                   href="https://github.com/muhammadabdullahwaseem-coder"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className="icon-colour home-social-icons"
                 >
                   <AiFillGithub />
                 </a>
@@ -70,27 +68,17 @@ function Home() {
                   href="mailto:mabdullahwaseem744@gmail.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className="icon-colour home-social-icons"
                 >
                   <AiOutlineMail />
                 </a>
               </li>
-              {/* <li className="social-icons">
-                <a
-                  href="https://x.com/MAbdullah121254"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaXTwitter />
-                </a>
-              </li> */}
               <li className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/m-abdullah-waseem"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className="icon-colour home-social-icons"
                 >
                   <FaLinkedinIn />
                 </a>

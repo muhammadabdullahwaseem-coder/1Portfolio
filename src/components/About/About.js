@@ -9,7 +9,6 @@ import Toolstack from "./Toolstack";
 function About() {
   return (
     <>
-      {" "}
       <Particle />
       <Container fluid className="about-section">
         <Container>
@@ -41,10 +40,7 @@ function About() {
 
           <Techstack />
 
-          
           <Toolstack />
-
-          
         </Container>
       </Container>
     </>

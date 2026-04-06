@@ -1,13 +1,6 @@
 # Muhammad Abdullah Waseem — Portfolio
-<div align="center">
-  <img alt="Portfolio Preview" src="./Images/readme-img1.png" />
-</div>
 
-## Overview
-Personal portfolio website built with React. This site highlights projects, skills, and resume.
-
-## Credit
-Original template by [Soumyajit4419](https://github.com/soumyajit4419/Portfolio) — [soumyajit.vercel.app](https://soumyajit.vercel.app/).
+Personal portfolio website built with React, showcasing my projects, tech skills, and resume.
 
 ## Built With
 - React.js
@@ -15,21 +8,20 @@ Original template by [Soumyajit4419](https://github.com/soumyajit4419/Portfolio)
 - CSS3
 
 ## Features
-- Multi-page layout
-- Fully responsive
-- Easy to customize
+- Multi-page layout (Home, About, Projects, Resume)
+- Particle background effect
+- Fully responsive design
+- PDF resume viewer with download
 
 ## Getting Started
-You will need `node.js` and `git` installed.
 
-## Installation
-1. Install dependencies: `npm install`
-2. Start the dev server: `npm start`
+Requires `node.js` and `git`.
 
-## Usage
-Edit your content in:
-- `src/components/`
-- `src/Assets/`
+```bash
+npm install
+npm start
+```
 
-## Deployment Notes
-Update social meta tags in `public/index.html` (title, URL, and image).
+## Deployment
+
+Update the `og:url` in `public/index.html` with your live domain before deploying.
