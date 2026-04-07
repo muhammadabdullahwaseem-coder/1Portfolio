@@ -7,6 +7,7 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiOutlineDollarCircle,
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
@@ -74,6 +75,19 @@ function NavBar() {
                   style={{ marginBottom: "2px" }}
                 />{" "}
                 Projects
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/services"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineDollarCircle
+                  style={{ marginBottom: "2px" }}
+                />{" "}
+                Services
               </Nav.Link>
             </Nav.Item>
 

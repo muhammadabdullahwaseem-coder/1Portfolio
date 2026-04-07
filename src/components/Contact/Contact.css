@@ -1,0 +1,208 @@
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+
+/* ===== DIVIDER ===== */
+.section-divider {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.divider-line {
+  width: 80%;
+  max-width: 600px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 210, 255, 0.4),
+    rgba(0, 210, 255, 0.6),
+    rgba(0, 210, 255, 0.4),
+    transparent
+  );
+}
+
+.divider-glow {
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  background: #00d2ff;
+  border-radius: 50%;
+  filter: blur(4px);
+  opacity: 0.6;
+}
+
+/* ===== HEADING ===== */
+.contact-heading {
+  font-size: 2.4em;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.contact-subheading {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1em;
+  margin-bottom: 16px;
+}
+
+/* ===== WHATSAPP NUMBER ===== */
+.whatsapp-number-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 45px;
+  font-size: 1.15em;
+  font-weight: 600;
+  color: #25D366;
+  letter-spacing: 0.5px;
+}
+
+.wa-inline-icon {
+  flex-shrink: 0;
+}
+
+/* ===== CONTACT CARDS ===== */
+.contact-cards-row {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-card-col {
+  padding: 15px;
+  display: flex;
+}
+
+.contact-card {
+  position: relative;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 35px 28px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(37, 211, 102, 0.3);
+  box-shadow:
+    0 0 20px rgba(37, 211, 102, 0.1),
+    0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card-icon {
+  font-size: 2.5em;
+  color: #25D366;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 0 6px rgba(37, 211, 102, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-card-icon {
+  transform: scale(1.1);
+}
+
+.contact-card-title {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.contact-card-desc {
+  font-size: 0.92em;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+/* ===== CONTACT BUTTONS ===== */
+.contact-card-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  font-size: 0.92em;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  max-width: 260px;
+}
+
+.contact-btn--primary {
+  color: white;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  border: none;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.contact-btn--primary:hover {
+  background: linear-gradient(135deg, #2ee076, #25D366);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.45);
+  transform: translateY(-2px);
+  color: white;
+}
+
+.contact-btn--secondary {
+  color: #25D366;
+  background: transparent;
+  border: 1px solid rgba(37, 211, 102, 0.4);
+}
+
+.contact-btn--secondary:hover {
+  background: rgba(37, 211, 102, 0.1);
+  border-color: #25D366;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991px) {
+  .contact-cards-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-card-col {
+    max-width: 500px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding-bottom: 70px;
+  }
+
+  .contact-heading {
+    font-size: 2em;
+  }
+}

@@ -1,0 +1,19 @@
+/* ===== FLOATING BUTTONS WRAPPER ===== */
+.floating-buttons-wrapper {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .floating-buttons-wrapper {
+    bottom: 16px;
+    right: 16px;
+    gap: 10px;
+  }
+}

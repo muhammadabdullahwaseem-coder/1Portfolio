@@ -4,6 +4,8 @@ import homeLogo from "../../Assets/home-main.webp";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+
+import Contact from "../Contact/Contact";
 import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -87,6 +89,8 @@ function Home() {
           </Col>
         </Row>
       </Container>
+
+      <Contact />
     </section>
   );
 }
