@@ -1,52 +1,53 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { ImPointRight } from "react-icons/im";
+import { BsArrowRightCircle } from "react-icons/bs";
 
 function AboutCard() {
   return (
     <Card className="quote-card-view">
       <Card.Body>
-        <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am{" "}
-            <span className="purple">Muhammad Abdullah Waseem </span>
-            from <span className="purple"> Lahore, Pakistan.</span>
-            <br />I am currently a passionate{" "}
-            <span className="purple">Mern Stack Developer</span> looking for
-            internship and entry level opportunities.
-            <br />I am pursuing a Diploma in Web Development with AI from{" "}
-            <span className="purple">Nexskill (Arfa Tower)</span> and completing
-            my ICS from <span className="purple">Punjab College</span>.
-            <br />
-            <br />
-            Apart from coding, I love to create and build things!
+        <div className="about-bio-container">
+          <p className="about-bio-text">
+            Hi, I am <span className="highlight-term">Muhammad Abdullah Waseem</span>, based in Lahore, Pakistan.
           </p>
 
-          <ul>
-            <li className="about-activity">
-              <ImPointRight /> Making Custom Perfumes 
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> DIY Electronics & Battery Projects
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Android Customization & Troubleshooting
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Creating and designing websites and applications
-            </li>
-          </ul>
-
-          <p style={{ color: "rgb(155 126 172)" }}>
-            "First, solve the problem. Then, write the code."{" "}
+          <p className="about-bio-text">
+            I am a <span className="highlight-term">Full-Stack Developer specializing in AI-integrated applications</span>. My work centers on architecting autonomous multi-agent pipelines with <span className="highlight-term">CrewAI</span>, high-performance RAG vector systems utilizing <span className="highlight-term">ChromaDB</span>, and robust web and mobile software for real-world business operations.
           </p>
-          <footer className="blockquote-footer">
-            Muhammad Abdullah Waseem
-          </footer>
-        </blockquote>
+
+          <p className="about-bio-text">
+            Backed by a professional diploma in <em>Web Development with AI</em> from Nexskill (Arfa Software Technology Park), I focus on bridging production-grade software engineering with state-of-the-art LLM reasoning, agent coordination, and computer vision.
+          </p>
+
+          <div className="about-focus-section">
+            <h4 className="about-focus-title">Core Focus &amp; What I Build:</h4>
+            <ul className="about-focus-list">
+              <li className="about-focus-item">
+                <BsArrowRightCircle className="focus-icon" /> Autonomous Multi-Agent Systems &amp; RAG Vector Workflows
+              </li>
+              <li className="about-focus-item">
+                <BsArrowRightCircle className="focus-icon" /> Mission-Critical Enterprise Web Platforms &amp; REST/WebSocket Backends
+              </li>
+              <li className="about-focus-item">
+                <BsArrowRightCircle className="focus-icon" /> Cross-Platform Mobile Apps (React Native &amp; Expo)
+              </li>
+              <li className="about-focus-item">
+                <BsArrowRightCircle className="focus-icon" /> Deep Learning &amp; Computer Vision Inspection Pipelines
+              </li>
+            </ul>
+          </div>
+
+          <div className="about-quote-box">
+            <p className="about-quote-text">
+              "First, solve the problem. Then, write the code."
+            </p>
+            <span className="about-quote-author">— Muhammad Abdullah Waseem</span>
+          </div>
+        </div>
       </Card.Body>
     </Card>
   );
 }
 
 export default AboutCard;
+

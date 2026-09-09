@@ -3,122 +3,151 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 
-import tonysHeadlight from "../../Assets/Projects/tonys-headlight.png";
-import silvasDetailing from "../../Assets/Projects/silvas-detailing.png";
-import chatify from "../../Assets/Projects/chatify.webp";
+// Project Media Assets
+import sharpenPromptImg from "../../Assets/Projects/sharpen-prompt.png";
+import proposalGenImg from "../../Assets/Projects/proposal-generator.png";
+import hafizBagsImg from "../../Assets/Projects/hafiz-bags.png";
+import vehicleDamageImg from "../../Assets/Projects/vehicle-damage.png";
 import nexlink from "../../Assets/Projects/nexlink.png";
-import crudApp from "../../Assets/Projects/crud-app.webp";
+import chatify from "../../Assets/Projects/chatify.webp";
 import solar from "../../Assets/Projects/solar.webp";
-import jwt from "../../Assets/Projects/jwt.webp";
-import rtk from "../../Assets/Projects/rtk.webp";
+import githubCtaImg from "../../Assets/Projects/github-cta.svg";
 
 function Projects() {
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
-        </h1>
-        <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
-        </p>
+        <div className="section-header-block text-center">
+          <div className="section-subtitle-badge">PORTFOLIO &amp; CASE STUDIES</div>
+          <h1 className="project-heading">
+            Featured <strong className="hero-title-gradient">Engineering Systems</strong>
+          </h1>
+          <p className="project-subtext">
+            Production multi-agent AI pipelines, enterprise full-stack applications, and interactive web software solving specific operational bottlenecks.
+          </p>
+        </div>
+
+        {/* 3-Column Spacious Grid (3 cards per row on desktop, left-aligned last row) */}
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-
-          {/* 1 — Tony's Headlight Restoration */}
-          <Col md={4} className="project-card">
+          {/* 1. Sharpen Prompt */}
+          <Col lg={4} md={6} className="project-card">
             <ProjectCard
-              imgPath={tonysHeadlight}
-              isBlog={false}
-              title="Tony's Headlight Restoration"
-              description="A conversion-focused website for a mobile headlight restoration business in Los Angeles. Built with service tiers and pricing, before/after results gallery, online booking flow, customer reviews, and fully responsive mobile-first design."
-              demoLink="https://tonys-headlight-restoration.vercel.app"
+              imgPath={sharpenPromptImg}
+              category="Prompt Engineering / LLMs"
+              title="Sharpen Prompt"
+              description="An intelligent prompt engineering and refinement utility designed to structure, benchmark, and optimize system instructions for high-reasoning LLMs, eliminating ambiguity and output hallucinations."
+              technologies={["Prompt Engineering", "LLM Optimization", "React", "Python"]}
+              demoLink="https://sharpen-prompt.vercel.app/"
             />
           </Col>
 
-          {/* 2 — Silva's Mobile Detailing */}
-          <Col md={4} className="project-card">
+          {/* 2. Upwork Proposal Generator */}
+          <Col lg={4} md={6} className="project-card">
             <ProjectCard
-              imgPath={silvasDetailing}
-              isBlog={false}
-              title="Silva's Mobile Detailing"
-              description="A professional service website for a mobile car detailing business serving the LA and Orange County area. Features service listings, booking functionality, and a clean conversion-focused layout built for local customers."
-              demoLink="https://silvas-detailing-main.vercel.app"
+              imgPath={proposalGenImg}
+              category="Multi-Agent System & RAG"
+              title="Upwork Proposal Generator"
+              description="Solves proposal fatigue and low win rates by ingesting client briefs and querying past winning bids in ChromaDB to generate hyper-tailored proposals via coordinated CrewAI agents."
+              technologies={[
+                "CrewAI",
+                "ChromaDB (RAG)",
+                "Groq / Gemini",
+                "Streamlit",
+                "Python",
+              ]}
+              ghLink="https://github.com/muhammadabdullahwaseem-coder/UpWork-proposal-writter"
+              demoLink="https://upwork-proposal-writter.streamlit.app/"
             />
           </Col>
 
-          {/* 3 — Real-Time Chat App */}
-          <Col md={4} className="project-card">
+          {/* 3. Hafiz Bags Factory Management App */}
+          <Col lg={4} md={6} className="project-card">
             <ProjectCard
-              imgPath={chatify}
-              isBlog={false}
-              title="Real-Time Chat App"
-              description="A real-time messaging app built with Socket.io that delivers instant communication, live updates, and smooth chat experience without requiring page refreshes."
-              ghLink="https://github.com/muhammadabdullahwaseem-coder/Chat_App"
-              demoLink="https://chat-app-socket-io-mj0n.onrender.com"
+              imgPath={hafizBagsImg}
+              category="Enterprise Mobile & ERP"
+              title="Hafiz Bags Factory Management"
+              description="Replaced manual paper logs and fragmented tracking with a phased digital factory operations system for inventory, assembly line cutting/stitching, and order dispatch for a manufacturing business (est. 1993)."
+              technologies={[
+                "React Native",
+                "Expo",
+                "MongoDB Atlas",
+                "Node.js",
+                "System Architecture",
+              ]}
+              statusLabel="Private Client Project // Est. 1993"
             />
           </Col>
 
-          {/* 4 — Link Shortener (Nex-Link) */}
-          <Col md={4} className="project-card">
+          {/* 4. Vehicle Damage Detection DL Project */}
+          <Col lg={4} md={6} className="project-card">
+            <ProjectCard
+              imgPath={vehicleDamageImg}
+              category="Computer Vision & Deep Learning"
+              title="Vehicle Damage Detection (DL)"
+              description="Automates exterior vehicle inspection and localized part damage classification using deep learning computer vision to expedite insurance claims triage and fleet condition assessment."
+              technologies={[
+                "Deep Learning",
+                "Computer Vision",
+                "PyTorch",
+                "FastAPI",
+                "Python",
+              ]}
+              ghLink="https://github.com/muhammadabdullahwaseem-coder/Vehicle-Damage-Detection-system"
+              demoLink="https://vehicle-damage-detection-system-dl.streamlit.app"
+            />
+          </Col>
+
+          {/* 5. Nex-Link (URL Shortener & QR) */}
+          <Col lg={4} md={6} className="project-card">
             <ProjectCard
               imgPath={nexlink}
-              isBlog={false}
-              title="Link Shortener (Nex-Link)"
-              description="A MERN-based URL shortener that converts long links into compact shareable URLs and generates downloadable QR codes through a clean, practical interface."
+              category="Full-Stack Web App"
+              title="Nex-Link (URL Shortener & QR)"
+              description="Streamlines marketing campaigns and asset distribution by converting bulky URLs into trackable, branded links with instant downloadable high-resolution QR codes."
+              technologies={["React.js", "Node.js", "Express", "MongoDB", "REST APIs"]}
               ghLink="https://github.com/muhammadabdullahwaseem-coder/Nex-Link"
               demoLink="https://link-shortener-by-mrab.onrender.com"
             />
           </Col>
 
-          {/* 5 — Online Store Dashboard */}
-          <Col md={4} className="project-card">
+          {/* 6. Real-Time Chat Application */}
+          <Col lg={4} md={6} className="project-card">
             <ProjectCard
-              imgPath={crudApp}
-              isBlog={false}
-              title="Online Store Dashboard"
-              description="A comprehensive admin dashboard for managing online store products with full CRUD operations. It provides an intuitive, responsive interface making it incredibly easy to add, edit, and organize inventory."
-              ghLink="https://github.com/muhammadabdullahwaseem-coder/Online-Store-Products"
-              demoLink="https://online-store-products.onrender.com"
+              imgPath={chatify}
+              category="Distributed Real-Time Systems"
+              title="Real-Time Chat Application"
+              description="Eliminates messaging delays and request polling through persistent bi-directional WebSockets, delivering zero-latency instant messaging and presence detection."
+              technologies={["Socket.io", "Node.js", "React.js", "Express", "WebSockets"]}
+              ghLink="https://github.com/muhammadabdullahwaseem-coder/Chat_App"
+              demoLink="https://chat-app-socket-io-mj0n.onrender.com"
             />
           </Col>
 
-          {/* 6 — Solar System Explorer */}
-          <Col md={4} className="project-card">
+          {/* 7. 3D Solar System Explorer */}
+          <Col lg={4} md={6} className="project-card">
             <ProjectCard
               imgPath={solar}
-              isBlog={false}
-              title="Solar System Explorer"
-              description="An interactive React.js application simulating the solar system. It features smooth CSS3 orbital animations and maps complex astronomical data to responsive UI components for exploring planets."
+              category="Interactive 3D / WebGL"
+              title="3D Solar System Explorer"
+              description="Bridges educational astrophysics and immersive web graphics by rendering interactive, real-time 3D planetary orbits and gravitational dynamics directly in the browser."
+              technologies={["Three.js", "WebGL", "React.js", "CSS3 Animations"]}
               ghLink="https://github.com/muhammadabdullahwaseem-coder/solar_system"
               demoLink="https://solar-system-by-abdullah.vercel.app"
             />
           </Col>
 
-          {/* 7 — Secure Authentication (JWT) */}
-          <Col md={4} className="project-card">
+          {/* 8. More on GitHub CTA Card */}
+          <Col lg={4} md={6} className="project-card">
             <ProjectCard
-              imgPath={jwt}
-              isBlog={false}
-              title="Secure Authentication (JWT)"
-              description="A secure authentication system using JSON Web Tokens to manage login, signup, protected routes, and user sessions with reliable access control."
-              ghLink="https://github.com/muhammadabdullahwaseem-coder/Login-page-JWT"
-              demoLink="https://login-page-jwt-1.onrender.com"
+              imgPath={githubCtaImg}
+              category="Open Source & Labs"
+              title="More on GitHub"
+              description="Additional experiments, tutorials, and smaller builds"
+              technologies={["Open Source", "Algorithms", "Agent Workflows", "Experiments"]}
+              ghLink="https://github.com/muhammadabdullahwaseem-coder"
             />
           </Col>
-
-          {/* 8 — Task Manager (Redux Toolkit) */}
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={rtk}
-              isBlog={false}
-              title="Task Manager (Redux Toolkit)"
-              description="A task management app powered by Redux Toolkit for predictable state handling, letting users create, update, track, and organize daily tasks efficiently."
-              ghLink="https://github.com/muhammadabdullahwaseem-coder/Redux-Toolkit"
-              demoLink="https://reduxtoolkitbybyntab.netlify.app"
-            />
-          </Col>
-
         </Row>
       </Container>
     </Container>

@@ -4,45 +4,41 @@ import {
   AiOutlineQuestionCircle,
   AiOutlineCalendar,
   AiOutlineProject,
+  AiOutlineMail,
 } from "react-icons/ai";
+import { FaWhatsapp } from "react-icons/fa";
 import "./Contact.css";
 
 const WHATSAPP_BASE = "https://wa.me/923270256089?text=";
+const GMAIL_ADDRESS = "muhammadabdullah121254@gmail.com";
 
 const contactCards = [
   {
     icon: <AiOutlineQuestionCircle />,
     title: "Quick Question",
     description:
-      "Have a question about my services, tech stack, or availability? Drop a message!",
-    primaryMsg:
-      "Hi Abdullah! I have a quick question about your services.",
-    primaryLabel: "Ask a Question",
-    secondaryMsg: null,
-    secondaryLabel: null,
+      "Have a question about my engineering capabilities, tech stack, or availability? Drop me a message!",
+    subject: "Quick Question regarding your Services",
+    emailBody: "Hi Abdullah,\n\nI have a quick question about your services and tech stack:\n\n",
+    waMsg: "Hi Abdullah! I have a quick question about your services.",
   },
   {
     icon: <AiOutlineCalendar />,
-    title: "Book a Meeting",
+    title: "Book a Discovery Call",
     description:
-      "Schedule a free 30-min discovery call to discuss your project in detail.",
-    primaryMsg:
-      "Hi Abdullah! I'd like to book a free 30-min discovery call to discuss my project.",
-    primaryLabel: "Book a Call",
-    secondaryMsg:
-      "Hi Abdullah! I'd like to get a price quote for my project. Here are the details:",
-    secondaryLabel: "Get a Price Quote",
+      "Schedule a 30-min discovery session to discuss your architecture, requirements, and scope in detail.",
+    subject: "Discovery Call Request",
+    emailBody: "Hi Abdullah,\n\nI'd like to book a 30-minute discovery call to discuss my project.\n\nProject details:\nPreferred date & time:\n",
+    waMsg: "Hi Abdullah! I'd like to book a free 30-min discovery call to discuss my project.",
   },
   {
     icon: <AiOutlineProject />,
     title: "Start a Project",
     description:
-      "Ready to kick things off? Send your project details and let's get started!",
-    primaryMsg:
-      "Hi Abdullah! I'm ready to start a project. Here are the details:\n\nProject type: \nDeadline: \nBudget: ",
-    primaryLabel: "Start a Project",
-    secondaryMsg: null,
-    secondaryLabel: null,
+      "Ready to build? Send over your scope or requirements brief to get a custom scoped architecture.",
+    subject: "Project Inception & Architecture Brief",
+    emailBody: "Hi Abdullah,\n\nI'm ready to start a project with you. Here are the initial details:\n\nProject Type:\nTarget Timeline:\nEstimated Scope / Features:\n",
+    waMsg: "Hi Abdullah! I'm ready to start a project. Here are the details:\n\nProject type:\nDeadline:\nScope:",
   },
 ];
 
@@ -60,20 +56,28 @@ function Contact() {
           Let's <span className="purple">Connect</span>
         </h1>
         <p className="contact-subheading">
-          Reach out on WhatsApp — I typically respond within a few hours.
+          Choose whichever channel suits you best — reach out on WhatsApp or Email directly.
         </p>
 
-        <div className="whatsapp-number-display">
-          <svg
-            className="wa-inline-icon"
-            viewBox="0 0 24 24"
-            fill="#25D366"
-            width="22"
-            height="22"
+        {/* Dual Direct Badges: WhatsApp & Gmail */}
+        <div className="contact-channels-bar">
+          <a
+            href="https://wa.me/923270256089"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-channel-pill contact-channel--wa"
           >
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          <span>+92 327 0256089</span>
+            <FaWhatsapp className="channel-icon" />
+            <span>+92 327 0256089</span>
+          </a>
+
+          <a
+            href={`mailto:${GMAIL_ADDRESS}`}
+            className="contact-channel-pill contact-channel--email"
+          >
+            <AiOutlineMail className="channel-icon" />
+            <span>{GMAIL_ADDRESS}</span>
+          </a>
         </div>
 
         <Row className="contact-cards-row">
@@ -85,34 +89,25 @@ function Contact() {
                 <p className="contact-card-desc">{card.description}</p>
 
                 <div className="contact-card-actions">
+                  {/* WhatsApp Action */}
                   <a
-                    href={`${WHATSAPP_BASE}${encodeURIComponent(card.primaryMsg)}`}
+                    href={`${WHATSAPP_BASE}${encodeURIComponent(card.waMsg)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="contact-btn contact-btn--primary"
+                    className="contact-btn contact-btn--wa"
                   >
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      width="18"
-                      height="18"
-                      style={{ marginRight: 8, flexShrink: 0 }}
-                    >
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                    </svg>
-                    {card.primaryLabel}
+                    <FaWhatsapp className="btn-icon" />
+                    <span>WhatsApp</span>
                   </a>
 
-                  {card.secondaryMsg && (
-                    <a
-                      href={`${WHATSAPP_BASE}${encodeURIComponent(card.secondaryMsg)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="contact-btn contact-btn--secondary"
-                    >
-                      {card.secondaryLabel}
-                    </a>
-                  )}
+                  {/* Email Action */}
+                  <a
+                    href={`mailto:${GMAIL_ADDRESS}?subject=${encodeURIComponent(card.subject)}&body=${encodeURIComponent(card.emailBody)}`}
+                    className="contact-btn contact-btn--email"
+                  >
+                    <AiOutlineMail className="btn-icon" />
+                    <span>Email</span>
+                  </a>
                 </div>
               </div>
             </Col>

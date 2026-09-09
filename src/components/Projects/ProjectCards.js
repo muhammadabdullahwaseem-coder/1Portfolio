@@ -1,70 +1,100 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import { CgWebsite } from "react-icons/cg";
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsBoxArrowUpRight } from "react-icons/bs";
 
 function ProjectCards(props) {
-  return (
-    <Card className="project-card-view">
-      <svg style={{ position: "absolute", width: 0, height: 0 }} aria-hidden="true">
-        <defs>
-          <filter id="blue-electric-filter" x="-20%" y="-20%" width="140%" height="140%">
-            <feTurbulence
-              type="fractalNoise"
-              baseFrequency="0.03"
-              numOctaves="4"
-              seed="5"
-              result="noise"
-            />
-            <feOffset in="noise" dx="0" dy="0" result="movingNoise">
-              <animate
-                attributeName="dx"
-                values="0; -100"
-                dur="1s"
-                repeatCount="indefinite"
-              />
-              <animate
-                attributeName="dy"
-                values="0; 100"
-                dur="2s"
-                repeatCount="indefinite"
-              />
-            </feOffset>
-            <feDisplacementMap
-              in="SourceGraphic"
-              in2="movingNoise"
-              scale="8"
-              xChannelSelector="R"
-              yChannelSelector="G"
-            />
-          </filter>
-        </defs>
-      </svg>
+  const hasDemo = Boolean(props.demoLink);
+  const hasGh = Boolean(props.ghLink);
+  const bothButtons = hasDemo && hasGh;
+  const singleButton = (hasDemo && !hasGh) || (!hasDemo && hasGh);
+  const noButtons = !hasDemo && !hasGh;
 
-      <Card.Img variant="top" src={props.imgPath} alt="card-img" />
-      <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: "center" }}>
+  return (
+    <Card className="project-card-view h-100 d-flex flex-column">
+      {/* Visual Media Header */}
+      <div className="card-img-wrapper">
+        <Card.Img variant="top" src={props.imgPath} alt={props.title} />
+        {props.category && (
+          <span className="card-category-pill">{props.category}</span>
+        )}
+      </div>
+
+      <Card.Body className="d-flex flex-column flex-grow-1">
+        <div className="card-header-row">
+          <Card.Title className="project-title">{props.title}</Card.Title>
+        </div>
+
+        {/* Problem-first One-Sentence Description */}
+        <Card.Text className="project-desc">
           {props.description}
         </Card.Text>
-        {props.ghLink && (
-          <Button variant="primary" href={props.ghLink} target="_blank">
-            <BsGithub /> &nbsp;
-            {props.isBlog ? "Blog" : "GitHub"}
-          </Button>
+
+        {/* Tech Stack Badges */}
+        {props.technologies && props.technologies.length > 0 && (
+          <div className="project-tech-badges">
+            {props.technologies.map((tech, idx) => (
+              <span key={idx} className="tech-badge">
+                {tech}
+              </span>
+            ))}
+          </div>
         )}
-        {!props.isBlog && props.demoLink && (
-          <Button
-            variant="primary"
-            href={props.demoLink}
-            target="_blank"
-            style={{ marginLeft: "10px" }}
-          >
-            <CgWebsite /> &nbsp;
-            {"Demo"}
-          </Button>
-        )}
+
+        {/* Action Links / Status pinned to the bottom */}
+        <div className="project-card-footer mt-auto">
+          {(hasDemo || hasGh) && (
+            <div className="project-card-actions">
+              {hasDemo && (
+                <a
+                  href={props.demoLink}
+                  target="blank"
+                  rel="noreferrer"
+                  className="btn-card-action btn-card-demo"
+                >
+                  <BsBoxArrowUpRight />
+                  <span>Live Demo</span>
+                </a>
+              )}
+
+              {hasGh && (
+                <a
+                  href={props.ghLink}
+                  target="blank"
+                  rel="noreferrer"
+                  className="btn-card-action btn-card-code"
+                >
+                  <BsGithub />
+                  <span>GitHub</span>
+                </a>
+              )}
+
+              {/* In-line status note if only 1 button exists */}
+              {props.statusNote && singleButton && (
+                <span className="card-status-note ms-auto">
+                  {props.statusNote}
+                </span>
+              )}
+            </div>
+          )}
+
+          {/* Dedicated full-width status line when both buttons exist */}
+          {props.statusNote && bothButtons && (
+            <div className="card-status-line-bottom">
+              <span className="card-status-note">
+                {props.statusNote}
+              </span>
+            </div>
+          )}
+
+          {/* Cards with no action links (e.g. Private Client Project // Est. 1993) */}
+          {noButtons && (
+            <div className="card-status-line">
+              <span className="card-status-note">
+                {props.statusLabel || props.statusNote || "Private Client Project"}
+              </span>
+            </div>
+          )}
+        </div>
       </Card.Body>
     </Card>
   );

@@ -6,11 +6,17 @@ function Type() {
     <Typewriter
       options={{
         strings: [
-          "MERN Stack Developer"
+          "Autonomous Multi-Agent Systems (CrewAI)",
+          "Production RAG & Vector Search",
+          "Enterprise Web & Mobile Architectures",
+          "Full-Stack Developer (AI-Integrated)"
         ],
         autoStart: true,
         loop: true,
-        deleteSpeed: 50,
+        deleteSpeed: 30,
+        delay: 45,
+        pauseFor: 2500,
+        cursor: "|",
       }}
     />
   );

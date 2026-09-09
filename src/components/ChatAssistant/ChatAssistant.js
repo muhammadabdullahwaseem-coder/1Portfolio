@@ -6,58 +6,61 @@ import "./ChatAssistant.css";
 // ─── FAQ Responses (Knowledge Base) ────────────────────────
 const FAQ = {
   pricing:
-    "Here's a quick overview of my pricing:\n\n" +
-    "🌐 Web Development — Starting PKR 25,000\n" +
-    "  • Landing page / portfolio: PKR 25K\n" +
-    "  • Multi-page business site: PKR 45K+\n" +
-    "  • Full web app / dashboard: PKR 80K+\n" +
-    "  • Includes SEO, mobile-first design, 1 month free support\n\n" +
-    "📱 Mobile Apps — Starting PKR 60,000 (Most popular!)\n" +
-    "  • Cross-platform iOS + Android (React Native / Flutter)\n" +
-    "  • App Store & Play Store deployment included\n" +
-    "  • 2 months free support\n\n" +
-    "🤖 AI Chatbots & Voice Bots — Starting PKR 35,000\n" +
-    "  • WhatsApp / Web / Telegram bots\n" +
-    "  • Voice bots, RAG on custom knowledge bases\n" +
-    "  • CRM & API integrations, 1 month free support\n\n" +
-    "For a custom quote, message me on WhatsApp: https://wa.me/923270256089",
+    "Here is an overview of my engineering services & custom solutions:\n\n" +
+    "🌐 Web Development — Custom Scoped\n" +
+    "  • High-performance landing pages, business platforms & SaaS portals\n" +
+    "  • Enterprise web apps & responsive dashboards with modern React/Next.js\n\n" +
+    "📱 Mobile App Development — Custom Scoped (Most Popular!)\n" +
+    "  • Cross-platform iOS & Android apps with React Native & Expo\n" +
+    "  • App Store & Play Store deployment with offline data sync\n\n" +
+    "🤖 AI Agent & Automation Systems — Custom Scoped\n" +
+    "  • Coordinated Multi-Agent workflows with CrewAI\n" +
+    "  • Vector RAG knowledge bases with ChromaDB & production LLM APIs\n\n" +
+    "🛠️ Custom AI Tooling — Custom Scoped\n" +
+    "  • Purpose-built prompt calibration suites, internal tools & middleware\n\n" +
+    "💬 AI Chatbots & Virtual Assistants — Custom Scoped\n" +
+    "  • WhatsApp, Web & Telegram bots with CRM webhook integrations\n\n" +
+    "All projects are scoped individually with transparent milestones and no fixed pre-sets. Reach out on WhatsApp (https://wa.me/923270256089) or Email (muhammadabdullah121254@gmail.com) to get a tailored quote for your project!",
   timeline:
     "Here are typical project timelines:\n\n" +
     "• Landing pages: 3–5 days\n" +
     "• Business websites: 1–2 weeks\n" +
     "• Mobile apps: 3–8 weeks\n" +
     "• AI chatbots: 1–3 weeks\n\n" +
-    "Timelines depend on scope — reach out on WhatsApp for a precise estimate!",
+    "Timelines depend on scope — reach out on WhatsApp or Email for a precise estimate!",
   portfolio:
-    "You can view my previous projects in the Projects section of this portfolio. Each project showcases real results — clean design, smart UX, and conversion optimization. Want case studies? Message me on WhatsApp!",
+    "You can view my previous projects in the Projects section of this portfolio. Each project showcases real results — clean design, smart UX, and conversion optimization. Want case studies? Reach out on WhatsApp or Email (muhammadabdullah121254@gmail.com)!",
   process:
     "Here's how I work:\n\n" +
-    "1️⃣ You reach out via WhatsApp or the contact section\n" +
+    "1️⃣ You reach out via WhatsApp or Email (muhammadabdullah121254@gmail.com)\n" +
     "2️⃣ Free 30-min discovery call to understand your needs\n" +
     "3️⃣ I send a detailed proposal with timeline & fixed price\n" +
     "4️⃣ 50% upfront, 50% on delivery\n" +
     "5️⃣ Development begins with regular updates\n" +
-    "6️⃣ Delivery + free support period\n\n" +
-    "Ready to start? 👉 https://wa.me/923270256089",
+    "6️⃣ Delivery + dedicated support period\n\n" +
+    "Ready to start? 👉 WhatsApp: https://wa.me/923270256089 | Email: muhammadabdullah121254@gmail.com",
   services:
     "I offer three core services:\n\n" +
-    "🌐 Web Development — landing pages, business sites, dashboards & web apps\n" +
-    "📱 Mobile App Development — cross-platform iOS + Android apps\n" +
-    "🤖 AI Chatbots & Voice Bots — WhatsApp bots, voice bots, RAG systems\n\n" +
-    "I also take on custom/enterprise projects — SaaS, retainers, large integrations. Let's discuss on WhatsApp!",
+    "🌐 Web Development — landing pages, business platforms, dashboards & web apps\n" +
+    "📱 Mobile App Development — cross-platform iOS + Android apps (React Native & Expo)\n" +
+    "🤖 AI Chatbots & Agent Systems — autonomous multi-agent workflows, vector RAG pipelines\n\n" +
+    "I also take on custom/enterprise projects — SaaS, retainers, large integrations. Let's discuss via WhatsApp or Email (muhammadabdullah121254@gmail.com)!",
   contact:
-    "The fastest way to reach me is WhatsApp:\n📱 +92 327 0256089\n👉 https://wa.me/923270256089\n\nYou can book a free 30-min discovery call, ask questions, or share your project brief!",
+    "You can reach me directly through either channel:\n\n" +
+    "📱 WhatsApp: +92 327 0256089 (https://wa.me/923270256089)\n" +
+    "✉️ Email: muhammadabdullah121254@gmail.com\n\n" +
+    "Feel free to book a discovery call, ask questions, or share your requirements brief!",
   revisions:
     "Yes! 2 rounds of revisions are included in every package. I want to make sure you're 100% happy with the result. 😊",
   international:
-    "Absolutely! I work with international clients and bill in USD equivalent. WhatsApp is the easiest way to coordinate across time zones.",
+    "Absolutely! I work with international clients and bill in USD equivalent. WhatsApp and Email are both great ways to coordinate across time zones.",
   custom_project:
-    "For custom/enterprise projects (SaaS, retainers, large integrations), pricing is discussed based on scope. Let's chat on WhatsApp to understand your requirements: https://wa.me/923270256089",
+    "For custom/enterprise projects (SaaS, retainers, large integrations), pricing is discussed based on scope. Reach out on WhatsApp (https://wa.me/923270256089) or Email (muhammadabdullah121254@gmail.com) to discuss your requirements:",
 };
 
 // ─── Quick Reply Buttons ───────────────────────────────────
 const INITIAL_QUICK_REPLIES = [
-  { label: "💲 Pricing & Services", value: "pricing" },
+  { label: "💬 Get a Quote", value: "pricing" },
   { label: "💼 View Projects", value: "portfolio" },
   { label: "⏱️ Timelines", value: "timeline" },
   { label: "📱 Contact / WhatsApp", value: "contact" },
@@ -287,7 +290,7 @@ function ChatAssistant() {
     if (isOpen && !hasOpened) {
       setHasOpened(true);
       addBotMessage(
-        "Hi! 👋 I'm Abdullah's AI assistant. I can help you with services & pricing, project timelines, or booking a free consultation. You can also reach Abdullah directly on WhatsApp (+92 327 0256089). How can I help you today?",
+        "Hi! 👋 I'm Abdullah's AI assistant. I can help you get a custom project quote, explore engineering services, check timelines, or book a free consultation. You can also reach Abdullah directly on WhatsApp (+92 327 0256089). How can I help you today?",
         INITIAL_QUICK_REPLIES
       );
       setConvoState(STATES.IDLE);
@@ -382,21 +385,21 @@ function ChatAssistant() {
 
       case "timeline_question":
         addBotMessage(FAQ.timeline, [
-          { label: "💲 Pricing Info", value: "pricing" },
+          { label: "💬 Get a Quote", value: "pricing" },
           { label: "📞 Book Consultation", value: "book" },
         ]);
         break;
 
       case "portfolio_question":
         addBotMessage(FAQ.portfolio, [
-          { label: "💲 Pricing Info", value: "pricing" },
+          { label: "💬 Get a Quote", value: "pricing" },
           { label: "📞 Book Consultation", value: "book" },
         ]);
         break;
 
       case "process_question":
         addBotMessage(FAQ.process, [
-          { label: "💲 Pricing Info", value: "pricing" },
+          { label: "💬 Get a Quote", value: "pricing" },
           { label: "📞 Book Consultation", value: "book" },
         ]);
         break;
@@ -406,7 +409,7 @@ function ChatAssistant() {
           `${FAQ.services}\n\nWould you like to book a free consultation to discuss your project in detail?`,
           [
             { label: "✅ Yes, let's book!", value: "book" },
-            { label: "💲 Pricing first", value: "pricing" },
+            { label: "💬 Get a Quote first", value: "pricing" },
           ]
         );
         break;
@@ -418,37 +421,37 @@ function ChatAssistant() {
       case "contact_question":
         addBotMessage(FAQ.contact, [
           { label: "🚀 Book a Free Call", value: "book" },
-          { label: "💲 Pricing & Services", value: "pricing" },
+          { label: "💬 Get a Quote", value: "pricing" },
         ]);
         break;
 
       case "mobile_app_question":
         addBotMessage(
-          "📱 Mobile App Development — Starting PKR 60,000\n\n" +
-          "• Cross-platform iOS + Android (React Native / Flutter)\n" +
+          "📱 Mobile App Development — Custom Scoped\n\n" +
+          "• Cross-platform iOS + Android (React Native / Expo)\n" +
           "• App Store & Play Store deployment included\n" +
-          "• Backend API integration\n" +
-          "• 2 months free support after delivery\n\n" +
-          "This is my most popular service! Want to discuss your app idea?",
+          "• Backend API integration & offline sync\n" +
+          "• Dedicated support after delivery\n\n" +
+          "This is my most popular service! Want to discuss your app idea or get a tailored quote?",
           [
             { label: "🚀 Book a Free Call", value: "book" },
-            { label: "💲 Full Pricing", value: "pricing" },
+            { label: "💬 Get a Quote", value: "pricing" },
           ]
         );
         break;
 
       case "ai_bot_question":
         addBotMessage(
-          "🤖 AI Chatbots & Voice Bots — Starting PKR 35,000\n\n" +
-          "• WhatsApp, website, & Telegram bots\n" +
-          "• Voice bots for inbound & outbound calls\n" +
-          "• RAG on custom knowledge bases\n" +
+          "🤖 AI Chatbots & Agent Systems — Custom Scoped\n\n" +
+          "• WhatsApp, website, & Telegram autonomous agents\n" +
+          "• Multi-agent workflows with CrewAI\n" +
+          "• High-precision RAG on custom knowledge bases (ChromaDB)\n" +
           "• CRM & third-party API integrations\n" +
-          "• 1 month free support\n\n" +
-          "Interested in automating your customer interactions?",
+          "• Dedicated support period\n\n" +
+          "Interested in automating your operations? Reach out for a custom quote!",
           [
             { label: "🚀 Book a Free Call", value: "book" },
-            { label: "💲 Full Pricing", value: "pricing" },
+            { label: "💬 Get a Quote", value: "pricing" },
           ]
         );
         break;
@@ -462,7 +465,7 @@ function ChatAssistant() {
 
       case "international_question":
         addBotMessage(FAQ.international, [
-          { label: "💲 Pricing & Services", value: "pricing" },
+          { label: "💬 Get a Quote", value: "pricing" },
           { label: "🚀 Book a Free Call", value: "book" },
         ]);
         break;
@@ -508,7 +511,7 @@ function ChatAssistant() {
           if (text.toLowerCase() === "contact") {
             addBotMessage(FAQ.contact, [
               { label: "🚀 Book a Free Call", value: "book" },
-              { label: "💲 Pricing & Services", value: "pricing" },
+              { label: "💬 Get a Quote", value: "pricing" },
             ]);
             return;
           }

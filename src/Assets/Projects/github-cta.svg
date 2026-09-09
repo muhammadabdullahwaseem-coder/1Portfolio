@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ghBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c16"/>
+      <stop offset="50%" stop-color="#0d182e"/>
+      <stop offset="100%" stop-color="#091322"/>
+    </linearGradient>
+    <filter id="ghShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#ghBg)"/>
+
+  <!-- Subtle grid lines -->
+  <g stroke="rgba(255,255,255,0.03)" stroke-width="1">
+    <line x1="0" y1="120" x2="800" y2="120"/>
+    <line x1="0" y1="250" x2="800" y2="250"/>
+    <line x1="0" y1="380" x2="800" y2="380"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+  </g>
+
+  <!-- Central Card/Terminal Window -->
+  <g filter="url(#ghShadow)">
+    <rect x="110" y="55" width="580" height="390" rx="16" fill="#0b1322" stroke="rgba(245, 166, 35, 0.3)" stroke-width="1.5"/>
+
+    <!-- Terminal Header Bar -->
+    <rect x="110" y="55" width="580" height="46" rx="16" fill="#101a2f"/>
+    <rect x="110" y="85" width="580" height="16" fill="#101a2f"/>
+
+    <!-- Window Dots -->
+    <circle cx="140" cy="78" r="6" fill="#ef4444" fill-opacity="0.8"/>
+    <circle cx="160" cy="78" r="6" fill="#8B5CF6" fill-opacity="0.8"/>
+    <circle cx="180" cy="78" r="6" fill="#10b981" fill-opacity="0.8"/>
+
+    <text x="400" y="82" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="middle">github.com/muhammadabdullahwaseem-coder</text>
+
+    <!-- Octocat Icon Graphic -->
+    <g transform="translate(150, 135)">
+      <circle cx="50" cy="50" r="46" fill="rgba(245, 166, 35, 0.08)" stroke="rgba(245, 166, 35, 0.4)" stroke-width="1.5"/>
+      <path d="M50 16 C31.2 16 16 31.2 16 50 C16 65 25.8 77.8 39.3 82.3 C41 82.6 41.6 81.6 41.6 80.7 C41.6 79.9 41.6 77.4 41.6 74.3 C32.1 76.4 30.1 69.8 30.1 69.8 C28.5 65.8 26.3 64.7 26.3 64.7 C23.2 62.6 26.5 62.6 26.5 62.6 C29.9 62.9 31.7 66.1 31.7 66.1 C34.7 71.3 39.6 69.8 41.6 68.9 C41.9 66.7 42.8 65.2 43.8 64.3 C36.2 63.4 28.3 60.5 28.3 47.4 C28.3 43.7 29.6 40.6 31.8 38.2 C31.4 37.3 30.3 33.8 32.1 29.2 C32.1 29.2 35 28.3 41.5 32.7 C44.2 31.9 47.1 31.5 50 31.5 C52.9 31.5 55.8 31.9 58.5 32.7 C65 28.3 67.9 29.2 67.9 29.2 C69.7 33.8 68.6 37.3 68.2 38.2 C70.4 40.6 71.7 43.7 71.7 47.4 C71.7 60.5 63.7 63.4 56.1 64.3 C57.3 65.4 58.4 67.5 58.4 70.8 C58.4 75.5 58.3 79.3 58.3 80.7 C58.3 81.6 58.9 82.7 60.7 82.3 C74.2 77.7 84 65 84 50 C84 31.2 68.8 16 50 16 Z" fill="#8B5CF6"/>
+    </g>
+
+    <!-- Terminal Code / Summary Block -->
+    <g transform="translate(280, 130)">
+      <text x="0" y="22" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="600">$ gh repo list --visibility public</text>
+      
+      <text x="0" y="55" fill="#f8fafc" font-family="sans-serif" font-size="18" font-weight="700">Open Source &amp; Engineering Labs</text>
+      <text x="0" y="80" fill="#94a3b8" font-family="sans-serif" font-size="13">Explorations in LLM pipelines, autonomous agents,</text>
+      <text x="0" y="102" fill="#94a3b8" font-family="sans-serif" font-size="13">distributed servers, algorithms, and interactive UI prototypes.</text>
+    </g>
+
+    <!-- Commit Activity / Heatmap Bars Simulation -->
+    <g transform="translate(150, 275)">
+      <rect x="0" y="0" width="500" height="135" rx="10" fill="#08101e" stroke="rgba(255,255,255,0.06)"/>
+      <text x="20" y="30" fill="#64748b" font-family="monospace" font-size="11">COMMIT CADENCE // ACTIVE REPOSITORIES</text>
+
+      <g transform="translate(20, 50)">
+        <rect x="0" y="0" width="14" height="14" rx="3" fill="#14532d"/>
+        <rect x="18" y="0" width="14" height="14" rx="3" fill="#16a34a"/>
+        <rect x="36" y="0" width="14" height="14" rx="3" fill="#22c55e"/>
+        <rect x="54" y="0" width="14" height="14" rx="3" fill="#15803d"/>
+        <rect x="72" y="0" width="14" height="14" rx="3" fill="#16a34a"/>
+        <rect x="90" y="0" width="14" height="14" rx="3" fill="#22c55e"/>
+        <rect x="108" y="0" width="14" height="14" rx="3" fill="#4ade80"/>
+        <rect x="126" y="0" width="14" height="14" rx="3" fill="#16a34a"/>
+        <rect x="144" y="0" width="14" height="14" rx="3" fill="#22c55e"/>
+        <rect x="162" y="0" width="14" height="14" rx="3" fill="#14532d"/>
+        <rect x="180" y="0" width="14" height="14" rx="3" fill="#15803d"/>
+        <rect x="198" y="0" width="14" height="14" rx="3" fill="#16a34a"/>
+        <rect x="216" y="0" width="14" height="14" rx="3" fill="#22c55e"/>
+        <rect x="234" y="0" width="14" height="14" rx="3" fill="#4ade80"/>
+        <rect x="252" y="0" width="14" height="14" rx="3" fill="#22c55e"/>
+        <rect x="270" y="0" width="14" height="14" rx="3" fill="#16a34a"/>
+        <rect x="288" y="0" width="14" height="14" rx="3" fill="#15803d"/>
+        <rect x="306" y="0" width="14" height="14" rx="3" fill="#22c55e"/>
+        <rect x="324" y="0" width="14" height="14" rx="3" fill="#4ade80"/>
+        <rect x="342" y="0" width="14" height="14" rx="3" fill="#86efac"/>
+        <rect x="360" y="0" width="14" height="14" rx="3" fill="#22c55e"/>
+        <rect x="378" y="0" width="14" height="14" rx="3" fill="#16a34a"/>
+        <rect x="396" y="0" width="14" height="14" rx="3" fill="#15803d"/>
+        <rect x="414" y="0" width="14" height="14" rx="3" fill="#22c55e"/>
+        <rect x="432" y="0" width="14" height="14" rx="3" fill="#4ade80"/>
+        <rect x="450" y="0" width="14" height="14" rx="3" fill="#16a34a"/>
+
+        <rect x="0" y="18" width="14" height="14" rx="3" fill="#16a34a"/>
+        <rect x="18" y="18" width="14" height="14" rx="3" fill="#22c55e"/>
+        <rect x="36" y="18" width="14" height="14" rx="3" fill="#4ade80"/>
+        <rect x="54" y="18" width="14" height="14" rx="3" fill="#22c55e"/>
+        <rect x="72" y="18" width="14" height="14" rx="3" fill="#15803d"/>
+        <rect x="90" y="18" width="14" height="14" rx="3" fill="#16a34a"/>
+        <rect x="108" y="18" width="14" height="14" rx="3" fill="#22c55e"/>
+        <rect x="126" y="18" width="14" height="14" rx="3" fill="#4ade80"/>
+        <rect x="144" y="18" width="14" height="14" rx="3" fill="#86efac"/>
+        <rect x="162" y="18" width="14" height="14" rx="3" fill="#22c55e"/>
+        <rect x="180" y="18" width="14" height="14" rx="3" fill="#16a34a"/>
+        <rect x="198" y="18" width="14" height="14" rx="3" fill="#15803d"/>
+        <rect x="216" y="18" width="14" height="14" rx="3" fill="#14532d"/>
+        <rect x="234" y="18" width="14" height="14" rx="3" fill="#16a34a"/>
+        <rect x="252" y="18" width="14" height="14" rx="3" fill="#22c55e"/>
+        <rect x="270" y="18" width="14" height="14" rx="3" fill="#4ade80"/>
+        <rect x="288" y="18" width="14" height="14" rx="3" fill="#22c55e"/>
+        <rect x="306" y="18" width="14" height="14" rx="3" fill="#16a34a"/>
+        <rect x="324" y="18" width="14" height="14" rx="3" fill="#15803d"/>
+        <rect x="342" y="18" width="14" height="14" rx="3" fill="#22c55e"/>
+        <rect x="360" y="18" width="14" height="14" rx="3" fill="#4ade80"/>
+        <rect x="378" y="18" width="14" height="14" rx="3" fill="#86efac"/>
+        <rect x="396" y="18" width="14" height="14" rx="3" fill="#22c55e"/>
+        <rect x="414" y="18" width="14" height="14" rx="3" fill="#16a34a"/>
+        <rect x="432" y="18" width="14" height="14" rx="3" fill="#15803d"/>
+        <rect x="450" y="18" width="14" height="14" rx="3" fill="#22c55e"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -3,8 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
-import laptopImg from "../../Assets/about.png";
-import Toolstack from "./Toolstack";
 
 function About() {
   return (
@@ -12,35 +10,28 @@ function About() {
       <Particle />
       <Container fluid className="about-section">
         <Container>
-          <Row style={{ justifyContent: "center", padding: "10px" }}>
-            <Col
-              md={7}
-              style={{
-                justifyContent: "center",
-                paddingTop: "30px",
-                paddingBottom: "50px",
-              }}
-            >
-              <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-                Know Who <strong className="purple">I'M</strong>
-              </h1>
+          <Row className="justify-content-center">
+            <Col lg={10} md={11} className="about-card-col">
+              <div className="section-header-block text-center mb-4">
+                <div className="section-subtitle-badge">ENGINEERING IDENTITY</div>
+                <h1 className="about-main-heading">
+                  System Architect &amp; <span className="highlight-term">AI Developer</span>
+                </h1>
+              </div>
               <Aboutcard />
             </Col>
-            <Col
-              md={5}
-              style={{ paddingTop: "120px", paddingBottom: "50px" }}
-              className="about-img"
-            >
-              <img src={laptopImg} alt="about" className="img-fluid" />
-            </Col>
           </Row>
-          <h1 className="project-heading">
-            Professional <strong className="purple">Skillset </strong>
-          </h1>
+          <div className="section-header-block text-center mt-5 mb-4">
+            <div className="section-subtitle-badge">ENGINEERING CAPABILITIES</div>
+            <h1 className="project-heading">
+              Technical <strong className="purple">Skillset &amp; Tooling</strong>
+            </h1>
+            <p className="project-subtext">
+              Leading with Autonomous Agentic AI workflows, vector RAG retrieval, and full-stack enterprise systems.
+            </p>
+          </div>
 
           <Techstack />
-
-          <Toolstack />
         </Container>
       </Container>
     </>
