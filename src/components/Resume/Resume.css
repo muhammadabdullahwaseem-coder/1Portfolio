@@ -416,3 +416,59 @@
     max-width: 280px;
   }
 }
+
+@media (max-width: 480px) {
+  .resume-paper {
+    padding: 20px 14px;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 14px;
+  }
+
+  .resume-name {
+    font-size: 1.45rem;
+  }
+
+  .resume-title-badge {
+    font-size: 0.82rem;
+  }
+
+  .resume-heading {
+    font-size: 1.65rem !important;
+  }
+
+  .resume-subtext {
+    font-size: 0.92rem;
+  }
+
+  .resume-section-title {
+    font-size: 1rem;
+  }
+
+  .resume-profile-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .resume-entry-role {
+    font-size: 0.94rem;
+  }
+
+  .resume-entry-sub {
+    font-size: 0.82rem;
+  }
+
+  .resume-bullets {
+    padding-left: 16px;
+    font-size: 0.86rem;
+  }
+
+  .resume-skill-label {
+    font-size: 0.78rem;
+  }
+
+  .resume-pill {
+    font-size: 0.72rem;
+    padding: 2px 8px;
+  }
+}

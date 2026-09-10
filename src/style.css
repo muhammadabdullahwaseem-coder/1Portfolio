@@ -513,14 +513,16 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  background: rgba(16, 185, 129, 0.1);
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  background: rgba(16, 185, 129, 0.16);
+  border: 1px solid rgba(52, 211, 153, 0.45);
   border-radius: 9999px;
   padding: 6px 14px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.8rem;
-  color: #34d399;
+  font-weight: 600;
+  color: #4ade80;
   margin-bottom: 22px;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.15);
 }
 
 .status-ping {
@@ -1798,5 +1800,84 @@ h1, h2, h3, h4, h5, h6 {
   .project-section,
   .about-section {
     padding-top: 100px !important;
+  }
+}
+
+/* --- Fine-grained mobile phone adjustments (screens <= 575px) --- */
+@media (max-width: 575px) {
+  .home-content {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .hero-main-title {
+    font-size: clamp(1.75rem, 7.2vw, 2.1rem) !important;
+    line-height: 1.25 !important;
+    word-break: break-word;
+  }
+
+  .hero-role-subtitle {
+    font-size: 1.02rem !important;
+  }
+
+  .hero-bio-lead {
+    font-size: 0.92rem !important;
+    line-height: 1.65 !important;
+  }
+
+  /* Balanced 2-row layout: Primary on top, WhatsApp & Email 50/50 below */
+  .hero-action-buttons {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .btn-hero-primary {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 12px 20px !important;
+  }
+
+  .btn-hero-secondary {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 11px 12px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .telemetry-metrics-bar {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .metric-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+  }
+
+  .metric-label {
+    margin-bottom: 0;
+  }
+
+  .home-section {
+    padding-top: 90px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .project-heading {
+    font-size: 1.7rem !important;
+  }
+
+  .section-subtitle-badge {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+
+  .project-subtext {
+    font-size: 0.9rem !important;
   }
 }
