@@ -30,12 +30,6 @@ This portfolio showcases my production full-stack platforms, autonomous multi-ag
 
 ---
 
-## 🖥️ Desktop Interface & Interactive Telemetry Window
-
-![Muhammad Abdullah Waseem Portfolio - Desktop Interface & Architecture Telemetry](./Images/readme-img1.png)
-
----
-
 ## 🛠️ Technical Competencies
 
 | Domain | Technologies & Core Tools |
