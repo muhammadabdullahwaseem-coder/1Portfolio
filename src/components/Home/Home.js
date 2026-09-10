@@ -38,7 +38,7 @@ function Home() {
               </div>
 
               <h1 className="hero-main-title">
-                Muhammad Abdullah <span className="hero-title-gradient">Waseem</span>
+                Muhammad <span className="hero-title-gradient">Abdullah Waseem</span>
               </h1>
 
               <h2 className="hero-role-subtitle">
