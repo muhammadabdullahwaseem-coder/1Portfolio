@@ -1,5 +1,3 @@
-<div align="center">
-
 # 🚀 Muhammad Abdullah Waseem — Portfolio
 
 ### Full-Stack Developer | AI-Integrated Applications & Autonomous Systems
@@ -10,29 +8,20 @@
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-Chat%20Directly-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/923270256089)
 [![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:muhammadabdullah121254@gmail.com)
 
-<br />
-
-<p align="center">
-  <strong>Engineering Autonomous Multi-Agent Systems (CrewAI), Context-Aware RAG Pipelines (ChromaDB), and Resilient Full-Stack Web & Mobile Architectures for Real-World Business Operations.</strong>
-</p>
+> **Engineering Autonomous Multi-Agent Systems (CrewAI), Context-Aware RAG Pipelines (ChromaDB), and Resilient Full-Stack Web & Mobile Architectures for Real-World Business Operations.**
 
 ---
 
-### 📱 Responsive Desktop & Mobile Experience
+## 📱 Responsive Laptop & Mobile Interface
 
-<p align="center">
-  <img src="Images/readme-img1.png" alt="Muhammad Abdullah Waseem Portfolio - Responsive Laptop and Mobile View" width="100%" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
-</p>
-
-</div>
+![Muhammad Abdullah Waseem Portfolio - Responsive Laptop and Mobile View](./Images/readme-img1.png)
 
 ---
 
 ## 🌟 Overview & Engineering Philosophy
 
-This repository contains the source code for my personal engineering portfolio — designed from the ground up to showcase production full-stack platforms, autonomous multi-agent pipelines, and computer vision systems.
+This portfolio showcases my production full-stack platforms, autonomous multi-agent pipelines, and computer vision systems.
 
-Unlike conventional static templates, this application features:
 - **Edge-to-edge Cosmic Aesthetic**: Deep obsidian backdrop (`#030014`), ambient glowing black-hole canvas animation, and subtle violet-to-cyan accent gradients (`#8B5CF6` to `#38BDF8`).
 - **Live Architecture Telemetry**: An interactive `ai-agent-runtime.pipeline` terminal component visualizing structured brief ingestion, ChromaDB vector matching, and Groq/Gemini inference in real-time.
 - **Client AI Chat Assistant**: An integrated client onboarding bot with instant quote inquiry channels and direct WhatsApp handoff.
@@ -41,11 +30,9 @@ Unlike conventional static templates, this application features:
 
 ---
 
-### 🖥️ Desktop Interface & Interactive Telemetry Window
+## 🖥️ Desktop Interface & Interactive Telemetry Window
 
-<div align="center">
-  <img src="Images/readme-img.png" alt="Muhammad Abdullah Waseem Portfolio - Desktop Interface" width="100%" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
-</div>
+![Muhammad Abdullah Waseem Portfolio - Desktop Interface & Architecture Telemetry](./Images/readme-img1.png)
 
 ---
 
@@ -108,8 +95,8 @@ Unlike conventional static templates, this application features:
 ```
 1Portfolio/
 ├── Images/                         # High-res README showcases & device mockups
-│   ├── readme-img.png              # Full desktop interface capture
-│   └── readme-img1.png             # Laptop & Smartphone responsive mockup
+│   ├── readme-img1.png             # Laptop & Smartphone responsive mockup
+│   └── readme-img.png              # Full desktop interface capture
 ├── public/
 │   ├── favicon.png                 # Glowing neon </> tab icon
 │   ├── favicon.ico                 # Multi-resolution favicon bundle
@@ -134,38 +121,6 @@ Unlike conventional static templates, this application features:
 │   └── style.css                   # Obsidian/Violet design system & media queries
 └── package.json                    # Project dependencies & build scripts
 ```
-
----
-
-## ⚡ Getting Started Locally
-
-### Prerequisites
-- [Node.js](https://nodejs.org/) (version `16.x` or higher recommended)
-- [Git](https://git-scm.com/)
-
-### Installation & Execution
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/muhammadabdullahwaseem-coder/1Portfolio.git
-   cd 1Portfolio
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server**:
-   ```bash
-   npm start
-   ```
-   Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
-
-4. **Build for production**:
-   ```bash
-   npm run build
-   ```
 
 ---
 
