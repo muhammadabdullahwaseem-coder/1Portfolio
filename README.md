@@ -2,7 +2,7 @@
 
 ### Full-Stack Developer | AI-Integrated Applications & Autonomous Systems
 
-[![Live Portfolio](https://img.shields.io/badge/Live%20Demo-muhammadabdullah.runs-on.dev/-8B5CF6?style=for-the-badge&logo=netlify&logoColor=white)](https://muhammadabdullah.runs-on.dev/)
+[![Live Portfolio](https://img.shields.io/badge/Live%20Demo-LIVE DEMO-8B5CF6?style=for-the-badge&logo=netlify&logoColor=white)](https://muhammadabdullah.runs-on.dev/)
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/muhammadabdullahwaseem-coder)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/m-abdullah-waseem)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-Chat%20Directly-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/923270256089)
