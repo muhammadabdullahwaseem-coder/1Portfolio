@@ -87,6 +87,53 @@ function NavBar() {
     }
   };
 
+  // Mobile Menu Liquid Glass Animation Tracking
+  const mobileMenuRef = useRef(null);
+  const mobileItemRefs = useRef({});
+  const [mobileActivePill, setMobileActivePill] = useState({ top: 0, height: 0, opacity: 0 });
+  const [mobileHoverPill, setMobileHoverPill] = useState({ top: 0, height: 0, opacity: 0 });
+
+  const updateMobileActivePosition = useCallback(() => {
+    const activeItem = NAV_ITEMS.find((item) => isActive(item.path));
+    const activePath = activeItem ? activeItem.path : "/";
+    const activeEl = mobileItemRefs.current[activePath];
+    const container = mobileMenuRef.current;
+
+    if (activeEl && container) {
+      const containerRect = container.getBoundingClientRect();
+      const elRect = activeEl.getBoundingClientRect();
+      setMobileActivePill({
+        top: elRect.top - containerRect.top,
+        height: elRect.height,
+        opacity: 1,
+      });
+    }
+  }, [isActive]);
+
+  useEffect(() => {
+    if (expand) {
+      const timer = setTimeout(updateMobileActivePosition, 40);
+      return () => clearTimeout(timer);
+    }
+  }, [expand, currentPath, updateMobileActivePosition]);
+
+  const handleMobileItemHover = (e) => {
+    const container = mobileMenuRef.current;
+    if (container && e.currentTarget) {
+      const containerRect = container.getBoundingClientRect();
+      const elRect = e.currentTarget.getBoundingClientRect();
+      setMobileHoverPill({
+        top: elRect.top - containerRect.top,
+        height: elRect.height,
+        opacity: 1,
+      });
+    }
+  };
+
+  const handleMobileContainerLeave = () => {
+    setMobileHoverPill((prev) => ({ ...prev, opacity: 0 }));
+  };
+
   const handleContainerLeave = () => {
     setHoverPill((prev) => ({ ...prev, opacity: 0 }));
   };
@@ -200,15 +247,43 @@ function NavBar() {
       {/* Mobile Drawer (Only rendered on mobile when expand is true) */}
       {expand && (
         <div className="mobile-navbar-drawer d-lg-none">
-          <div className="mobile-nav-pill-menu">
+          <div
+            ref={mobileMenuRef}
+            className="mobile-nav-pill-menu"
+            onMouseLeave={handleMobileContainerLeave}
+          >
+            {/* Sliding Liquid Glass Active Indicator for Mobile */}
+            <div
+              className="mobile-nav-liquid-glass-active"
+              style={{
+                transform: `translate3d(0, ${mobileActivePill.top}px, 0)`,
+                height: `${mobileActivePill.height}px`,
+                opacity: mobileActivePill.opacity,
+              }}
+              aria-hidden="true"
+            />
+
+            {/* Fluid Liquid Hover Glaze for Mobile */}
+            <div
+              className="mobile-nav-liquid-glass-hover"
+              style={{
+                transform: `translate3d(0, ${mobileHoverPill.top}px, 0)`,
+                height: `${mobileHoverPill.height}px`,
+                opacity: mobileHoverPill.opacity,
+              }}
+              aria-hidden="true"
+            />
+
             {NAV_ITEMS.map((item) => {
               const active = isActive(item.path);
               return (
                 <Link
                   key={item.path}
+                  ref={(el) => (mobileItemRefs.current[item.path] = el)}
                   to={item.path}
                   className={"mobile-nav-pill-item " + (active ? "active" : "")}
                   onClick={() => updateExpanded(false)}
+                  onMouseEnter={handleMobileItemHover}
                 >
                   {item.label}
                 </Link>
