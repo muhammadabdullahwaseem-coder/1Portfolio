@@ -41,3 +41,22 @@
     opacity: 0;
   }
 }
+
+/* Mobile responsive sizing */
+@media (max-width: 768px) {
+  .whatsapp-bubble {
+    width: 46px;
+    height: 46px;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+  }
+
+  .whatsapp-bubble svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .whatsapp-pulse {
+    width: 46px;
+    height: 46px;
+  }
+}

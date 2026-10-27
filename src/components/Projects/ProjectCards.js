@@ -13,7 +13,13 @@ function ProjectCards(props) {
     <Card className="project-card-view h-100 d-flex flex-column">
       {/* Visual Media Header */}
       <div className="card-img-wrapper">
-        <Card.Img variant="top" src={props.imgPath} alt={props.title} />
+        <Card.Img
+          variant="top"
+          src={props.imgPath}
+          alt={props.title}
+          loading="lazy"
+          decoding="async"
+        />
         {props.category && (
           <span className="card-category-pill">{props.category}</span>
         )}
@@ -47,7 +53,7 @@ function ProjectCards(props) {
               {hasDemo && (
                 <a
                   href={props.demoLink}
-                  target="blank"
+                  target="_blank"
                   rel="noreferrer"
                   className="btn-card-action btn-card-demo"
                 >
@@ -59,7 +65,7 @@ function ProjectCards(props) {
               {hasGh && (
                 <a
                   href={props.ghLink}
-                  target="blank"
+                  target="_blank"
                   rel="noreferrer"
                   className="btn-card-action btn-card-code"
                 >

@@ -10,7 +10,7 @@
   gap: 12px;
 }
 
-/* On mobile phones and small tablets, hide redundant bubbles to prevent overlapping cards */
+/* On mobile phones and small tablets, keep bubbles visible, properly sized and spaced */
 @media (max-width: 768px) {
   .floating-buttons-wrapper {
     bottom: 16px;
@@ -20,6 +20,6 @@
 
   .email-bubble,
   .whatsapp-bubble {
-    display: none !important;
+    display: flex !important;
   }
 }

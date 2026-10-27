@@ -23,6 +23,7 @@ function Home() {
             loop
             playsInline
             preload="auto"
+            poster={process.env.PUBLIC_URL + "/blackhole-poster.webp"}
             className="hero-blackhole-video"
           >
             <source src={process.env.PUBLIC_URL + "/blackhole.webm"} type="video/webm" />

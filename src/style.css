@@ -244,20 +244,96 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-fill-color: transparent !important;
 }
 
-/* Center Nav Pill Capsule */
+/* Center Nav Pill Capsule (Liquid Glass Container) */
 .nav-center-pill {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  gap: 2px;
+  background: rgba(15, 20, 36, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 9999px;
-  padding: 4px 6px;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  padding: 4px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  box-shadow: 
+    0 4px 20px -2px rgba(0, 0, 0, 0.4),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.08);
+  isolation: isolate;
 }
 
+/* Sliding Liquid Glass Active Indicator */
+.nav-liquid-glass-active {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: calc(100% - 8px);
+  border-radius: 9999px;
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.35) 0%,
+    rgba(139, 92, 246, 0.28) 45%,
+    rgba(56, 189, 248, 0.26) 100%
+  );
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 
+    0 4px 22px -2px rgba(168, 85, 247, 0.45),
+    0 0 20px rgba(56, 189, 248, 0.28),
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.65),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  z-index: 1;
+  transition: 
+    transform 0.44s cubic-bezier(0.34, 1.35, 0.64, 1),
+    width 0.38s cubic-bezier(0.34, 1.35, 0.64, 1),
+    opacity 0.25s ease;
+  will-change: transform, width;
+}
+
+/* Liquid Specular Glare Wave Across the Active Pill */
+.nav-liquid-glass-active::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 8px;
+  right: 8px;
+  height: 42%;
+  border-radius: 9999px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
+}
+
+/* Fluid Liquid Hover Glaze */
+.nav-liquid-glass-hover {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: calc(100% - 8px);
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+  z-index: 0;
+  transition: 
+    transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+    width 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.2s ease;
+  will-change: transform, width, opacity;
+}
+
+/* Nav Item Link (Above the Glass Indicator) */
 .nav-pill-item {
+  position: relative;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -268,22 +344,24 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   color: var(--text-secondary);
   text-decoration: none !important;
-  border: 1px solid transparent;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  box-shadow: none !important;
+  transition: color 0.25s ease, text-shadow 0.25s ease !important;
   white-space: nowrap;
+  user-select: none;
 }
 
 .nav-pill-item:hover {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.06);
+  color: #f8fafc !important;
 }
 
 .nav-pill-item.active {
   color: #ffffff !important;
-  background: rgba(139, 92, 246, 0.18) !important;
-  border: 1px solid rgba(139, 92, 246, 0.38) !important;
-  box-shadow: 0 0 16px rgba(139, 92, 246, 0.22) !important;
-  font-weight: 600;
+  font-weight: 700;
+  text-shadow: 
+    0 0 12px rgba(255, 255, 255, 0.65),
+    0 0 22px rgba(168, 85, 247, 0.55) !important;
 }
 
 /* Social Icons Container (Right Side) */
@@ -1881,3 +1959,338 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9rem !important;
   }
 }
+
+/* ==========================================================================
+   FLUID ANIMATION SYSTEM (Modern Web Experience)
+   ========================================================================== */
+
+/* 1. Global Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.45);
+  color: #fff;
+}
+
+/* 2. Scroll Reveal Transitions */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(28px) scale(0.985);
+  transition: 
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--reveal-index, 1) * 0.055s);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* 3. Fluid Animated Gradient Shimmer on Headings & Accents */
+@keyframes gradientShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero-title-gradient,
+.hero-accent-text,
+.purple,
+.highlight-term {
+  background: linear-gradient(135deg, #a78bfa 0%, #38bdf8 32%, #f472b6 68%, #a78bfa 100%) !important;
+  background-size: 260% 260% !important;
+  animation: gradientShimmer 9s ease infinite !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  display: inline-block;
+}
+
+/* 4. Organic Floating Micro-Interactions */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.hero-status-pill {
+  animation: floatGentle 4.5s ease-in-out infinite;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease !important;
+}
+
+.hero-status-pill:hover {
+  transform: translateY(-7px) scale(1.02) !important;
+  box-shadow: 0 0 24px rgba(16, 185, 129, 0.35) !important;
+}
+
+.section-subtitle-badge {
+  animation: floatGentle 5s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-subtitle-badge:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.3);
+}
+
+/* 5. Terminal Typewriter Container Neon Polish */
+.hero-typewriter-container {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease !important;
+}
+
+.hero-typewriter-container:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(139, 92, 246, 0.65) !important;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.5), 0 0 24px rgba(139, 92, 246, 0.28) !important;
+}
+
+/* 6. Hero Action Buttons Fluid Spring Physics & Light Sweep */
+.btn-hero-primary {
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, background 0.3s ease !important;
+}
+
+.btn-hero-primary::after {
+  content: "" !important;
+  position: absolute !important;
+  top: -50% !important;
+  left: -70% !important;
+  width: 45% !important;
+  height: 200% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent) !important;
+  transform: rotate(25deg) !important;
+  pointer-events: none !important;
+}
+
+.btn-hero-primary:hover::after {
+  left: 150% !important;
+  transition: left 0.85s ease-in-out !important;
+}
+
+.btn-hero-primary:hover {
+  transform: translateY(-4px) scale(1.025) !important;
+  box-shadow: 0 14px 34px rgba(139, 92, 246, 0.55), 0 0 22px rgba(56, 189, 248, 0.35) !important;
+}
+
+.btn-hero-primary:active {
+  transform: translateY(-1px) scale(0.98) !important;
+}
+
+.btn-hero-secondary {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease, color 0.35s ease !important;
+}
+
+.btn-hero-secondary:hover {
+  transform: translateY(-4px) scale(1.025) !important;
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.3) !important;
+}
+
+.btn-hero-secondary:active {
+  transform: translateY(-1px) scale(0.98) !important;
+}
+
+.btn-hero-email:hover {
+  box-shadow: 0 10px 24px rgba(139, 92, 246, 0.35) !important;
+}
+
+/* 7. AI Telemetry Data Flow Stream Animation */
+@keyframes connectorStream {
+  0% {
+    top: -4px;
+    opacity: 0;
+    transform: scaleY(0.6);
+  }
+  25% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    top: 22px;
+    opacity: 0;
+    transform: scaleY(0.6);
+  }
+}
+
+.telemetry-connector {
+  position: relative !important;
+  height: 22px !important;
+  margin-left: 20px !important;
+  border-left: 2px dashed rgba(139, 92, 246, 0.35) !important;
+  overflow: visible !important;
+}
+
+.connector-pulse {
+  position: absolute !important;
+  left: -4px !important;
+  width: 6px !important;
+  height: 10px !important;
+  border-radius: 999px !important;
+  background: #38bdf8 !important;
+  box-shadow: 0 0 10px #38bdf8, 0 0 18px #818cf8 !important;
+  animation: connectorStream 1.9s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
+}
+
+.telemetry-node {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.telemetry-node:hover {
+  transform: translateX(6px) !important;
+  border-color: rgba(56, 189, 248, 0.5) !important;
+  box-shadow: 0 8px 24px -6px rgba(56, 189, 248, 0.25) !important;
+}
+
+/* 8. Philosophy Cards Fluid Hover Glow */
+.philosophy-card {
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease !important;
+}
+
+.philosophy-card::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, transparent, #8b5cf6, #38bdf8, transparent) !important;
+  opacity: 0 !important;
+  transition: opacity 0.4s ease !important;
+}
+
+.philosophy-card:hover {
+  transform: translateY(-8px) scale(1.015) !important;
+  border-color: rgba(139, 92, 246, 0.55) !important;
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.8), 0 0 30px rgba(139, 92, 246, 0.25) !important;
+}
+
+.philosophy-card:hover::before {
+  opacity: 1 !important;
+}
+
+/* 9. Project Cards 3D Lift & Image Scale */
+.project-card-view {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease !important;
+}
+
+.project-card-view:hover {
+  transform: translateY(-9px) scale(1.015) !important;
+  border-color: #c084fc !important;
+  box-shadow: 
+    0 24px 50px -10px rgba(0, 0, 0, 0.8), 
+    0 0 32px rgba(168, 85, 247, 0.4), 
+    0 0 16px rgba(56, 189, 248, 0.2) !important;
+}
+
+.project-card-view:hover .card-img-wrapper img {
+  transform: scale(1.07) !important;
+  opacity: 1 !important;
+}
+
+.tech-badge {
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.25s ease, color 0.25s ease, border-color 0.25s ease !important;
+}
+
+.tech-badge:hover {
+  transform: translateY(-2px) scale(1.06) !important;
+  background: rgba(139, 92, 246, 0.28) !important;
+  border-color: rgba(168, 85, 247, 0.6) !important;
+  color: #fff !important;
+}
+
+.btn-card-action {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, background 0.3s ease !important;
+}
+
+.btn-card-action:hover {
+  transform: translateY(-3px) scale(1.04) !important;
+}
+
+.btn-card-action:active {
+  transform: translateY(0) scale(0.96) !important;
+}
+
+/* 10. Techstack Cards Spring Hover & Icon Float */
+.skill-badge-card {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease !important;
+}
+
+.skill-badge-card:hover {
+  transform: translateY(-6px) scale(1.03) !important;
+  border-color: rgba(168, 85, 247, 0.65) !important;
+  background: rgba(23, 37, 84, 0.82) !important;
+  box-shadow: 0 14px 28px -6px rgba(0, 0, 0, 0.6), 0 0 22px rgba(147, 51, 234, 0.32) !important;
+}
+
+.skill-badge-card .skill-icon-wrap {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease !important;
+}
+
+.skill-badge-card:hover .skill-icon-wrap {
+  transform: scale(1.22) rotate(6deg) !important;
+  color: #38bdf8 !important;
+}
+
+/* 11. Navbar Social Hover Spring */
+
+.nav-social-btn {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.25s ease, background 0.25s ease !important;
+}
+
+.nav-social-btn:hover {
+  transform: translateY(-3px) scale(1.18) !important;
+  color: #c084fc !important;
+  box-shadow: 0 0 16px rgba(168, 85, 247, 0.5) !important;
+}
+
+/* 12. Floating Action Bubbles */
+.fab-icon-bubble,
+.chat-assistant-fab {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease !important;
+}
+
+.fab-icon-bubble:hover,
+.chat-assistant-fab:hover {
+  transform: scale(1.12) translateY(-2px) !important;
+}
+
+.fab-icon-bubble:active,
+.chat-assistant-fab:active {
+  transform: scale(0.96) !important;
+}
+
+/* 13. Social Icons Spring Hover */
+.home-social-icons {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease !important;
+}
+
+.home-social-icons:hover {
+  transform: translateY(-5px) scale(1.15) !important;
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.5) !important;
+}
+

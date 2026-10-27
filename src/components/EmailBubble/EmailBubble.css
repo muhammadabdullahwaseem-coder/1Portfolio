@@ -43,3 +43,21 @@
     opacity: 0;
   }
 }
+
+/* Mobile responsive sizing */
+@media (max-width: 768px) {
+  .email-bubble {
+    width: 46px;
+    height: 46px;
+    box-shadow: 0 4px 14px rgba(139, 92, 246, 0.4);
+  }
+
+  .email-bubble svg {
+    font-size: 22px !important;
+  }
+
+  .email-pulse {
+    width: 46px;
+    height: 46px;
+  }
+}

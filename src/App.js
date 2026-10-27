@@ -21,13 +21,40 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [load, upadateLoad] = useState(true);
+  const [isOffline, setIsOffline] = useState(!navigator.onLine);
+  const [showBackOnline, setShowBackOnline] = useState(false);
 
   useEffect(() => {
+    // Instantaneous, smooth mount without artificial blocking delay
     const timer = setTimeout(() => {
       upadateLoad(false);
-    }, 1200);
+    }, 100);
 
-    return () => clearTimeout(timer);
+    let onlineTimer = null;
+
+    const handleOffline = () => {
+      setIsOffline(true);
+      setShowBackOnline(false);
+    };
+
+    const handleOnline = () => {
+      setIsOffline(false);
+      setShowBackOnline(true);
+      if (onlineTimer) clearTimeout(onlineTimer);
+      onlineTimer = setTimeout(() => {
+        setShowBackOnline(false);
+      }, 3500);
+    };
+
+    window.addEventListener("offline", handleOffline);
+    window.addEventListener("online", handleOnline);
+
+    return () => {
+      clearTimeout(timer);
+      if (onlineTimer) clearTimeout(onlineTimer);
+      window.removeEventListener("offline", handleOffline);
+      window.removeEventListener("online", handleOnline);
+    };
   }, []);
 
   return (
@@ -47,6 +74,22 @@ function App() {
         <Footer />
       </div>
       <FloatingButtons />
+
+      {/* Offline / Cached mode status toast */}
+      {isOffline && (
+        <div className="network-status-toast offline" role="status" aria-live="polite">
+          <span className="status-dot offline"></span>
+          <span>Offline Mode — Running from Local Cache</span>
+        </div>
+      )}
+
+      {/* Back Online notification */}
+      {showBackOnline && (
+        <div className="network-status-toast online" role="status" aria-live="polite">
+          <span className="status-dot online"></span>
+          <span>Connection Restored</span>
+        </div>
+      )}
     </Router>
   );
 }

@@ -3,12 +3,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 
-// Project Media Assets
-import sharpenPromptImg from "../../Assets/Projects/sharpen-prompt.png";
-import proposalGenImg from "../../Assets/Projects/proposal-generator.png";
-import hafizBagsImg from "../../Assets/Projects/hafiz-bags.png";
-import vehicleDamageImg from "../../Assets/Projects/vehicle-damage.png";
-import nexlink from "../../Assets/Projects/nexlink.png";
+// Project Media Assets (Optimized WebP for instant rendering)
+import sharpenPromptImg from "../../Assets/Projects/sharpen-prompt.webp";
+import proposalGenImg from "../../Assets/Projects/proposal-generator.webp";
+import hafizBagsImg from "../../Assets/Projects/hafiz-bags.webp";
+import vehicleDamageImg from "../../Assets/Projects/vehicle-damage.webp";
+import nexlink from "../../Assets/Projects/nexlink.webp";
 import chatify from "../../Assets/Projects/chatify.webp";
 import solar from "../../Assets/Projects/solar.webp";
 import githubCtaImg from "../../Assets/Projects/github-cta.svg";
